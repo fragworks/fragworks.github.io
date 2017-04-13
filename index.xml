@@ -6,30 +6,22 @@
     <description>Recent content on FRAG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Apr 2016 20:26:34 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 13 Apr 2017 11:11:53 -0400</lastBuildDate>
     
 	<atom:link href="http://fragworks.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Adding content</title>
-      <link>http://fragworks.io/adding-content/index/</link>
-      <pubDate>Sat, 23 Apr 2016 20:26:34 +0200</pubDate>
-      
-      <guid>http://fragworks.io/adding-content/index/</guid>
-      <description>Hello world Let&amp;rsquo;s create our first content file for your documentation. Open a terminal and add the following command for each new file you want to add. Replace &amp;lt;section-name&amp;gt; with a general term that describes your document in detail.
-hugo new &amp;lt;section-name&amp;gt;/filename.md  Visitors of your website will find the final document under www.example.com/&amp;lt;section-name&amp;gt;/filename/.
-Since it&amp;rsquo;s possible to have multiple content files in the same section I recommend to create at least one index.</description>
-    </item>
-    
-    <item>
       <title>Roadmap</title>
       <link>http://fragworks.io/roadmap/index/</link>
-      <pubDate>Sat, 23 Apr 2016 20:08:11 +0100</pubDate>
+      <pubDate>Thu, 13 Apr 2017 11:11:53 -0400</pubDate>
       
       <guid>http://fragworks.io/roadmap/index/</guid>
-      <description>Quo vadis? The port of the original Alabaster theme has replicated nearly all of its features. A few are still missing, but I&amp;rsquo;ve good news: the Hugo community is actively working on this issues. Maybe with the next release of Hugo we can abandon this list. Stay tuned.
-Planned features Localization Currently, it is possible to collect all strings in a single place for easy customization. However, this only enables you to define all strings in a single language.</description>
+      <description>Samples The following samples are in development for FRAG:
+Space Shooter   FRAG Releases FRAG is currently in pre-alpha status. When releases of FRAG are available, they will be listed on this page.
+ Issues, Enhancements, Features All issues, enhancements, and features related to FRAG can be found on the github issues page.
+ Contributing To open an issue or suggest a new feature, please create an issue.
+Pull requests are also welcome.</description>
     </item>
     
     <item>
