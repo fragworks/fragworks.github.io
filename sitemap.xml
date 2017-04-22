@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://fragworks.io/roadmap/index/</loc>
-    <lastmod>2017-04-13T11:11:53-04:00</lastmod>
+    <loc>http://fragworks.io/community/index/</loc>
+    <lastmod>2017-04-22T11:05:55-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://fragworks.io/getting-started/index/</loc>
-    <lastmod>2017-04-13T00:15:02-04:00</lastmod>
+    <loc>http://fragworks.io/roadmap/index/</loc>
+    <lastmod>2017-04-13T11:11:53-04:00</lastmod>
   </url>
   
   <url>
@@ -22,14 +22,14 @@
   </url>
   
   <url>
-    <loc>http://fragworks.io/</loc>
-    <lastmod>2017-04-13T11:11:53-04:00</lastmod>
+    <loc>http://fragworks.io/community/</loc>
+    <lastmod>2017-04-22T11:05:55-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://fragworks.io/getting-started/</loc>
-    <lastmod>2017-04-13T00:15:02-04:00</lastmod>
+    <loc>http://fragworks.io/</loc>
+    <lastmod>2017-04-22T11:05:55-04:00</lastmod>
     <priority>0</priority>
   </url>
   

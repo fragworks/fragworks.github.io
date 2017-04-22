@@ -6,10 +6,19 @@
     <description>Recent content on FRAG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Apr 2017 11:11:53 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 22 Apr 2017 11:05:55 -0400</lastBuildDate>
     
 	<atom:link href="http://fragworks.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Community</title>
+      <link>http://fragworks.io/community/index/</link>
+      <pubDate>Sat, 22 Apr 2017 11:05:55 -0400</pubDate>
+      
+      <guid>http://fragworks.io/community/index/</guid>
+      <description>Forums The forums for frag can be found here</description>
+    </item>
     
     <item>
       <title>Roadmap</title>
@@ -22,15 +31,6 @@ Space Shooter   FRAG Releases FRAG is currently in pre-alpha status. When releas
  Issues, Enhancements, Features All issues, enhancements, and features related to FRAG can be found on the github issues page.
  Contributing To open an issue or suggest a new feature, please create an issue.
 Pull requests are also welcome.</description>
-    </item>
-    
-    <item>
-      <title>index</title>
-      <link>http://fragworks.io/getting-started/index/</link>
-      <pubDate>Thu, 13 Apr 2017 00:15:02 -0400</pubDate>
-      
-      <guid>http://fragworks.io/getting-started/index/</guid>
-      <description></description>
     </item>
     
     <item>
