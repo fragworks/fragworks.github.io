@@ -1,211 +1,109 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head lang="en-us">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-	<meta name="description" content="Framework for Rather Awesome Games.">
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FRAG</title>
+	
+	
+	<link rel="stylesheet" href="http://fragworks.io/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="http://fragworks.io/index.xml" rel="feed" type="application/rss+xml" title="FRAG">
 	<meta name="generator" content="Hugo 0.20" />
-	
-	<title> FRAG</title>
-	
-	<link rel="stylesheet" href="http://fragworks.io/css/alabaster.css" type="text/css" />
-	<link rel="stylesheet" href="http://fragworks.io/css/highlight.css" type="text/css" />
-
-	
-
-	<link rel="shortcut icon" href="http://fragworks.io/favicon.ico" type="image/x-icon"/>
 </head>
-
-	<body role="document">
-		<div class="document">
-			<div class="documentwrapper">
-				<div class="bodywrapper">
-					<div class="body" role="main">
-						
-	
-		<h1>Framework for Rather Awesome Games</h1>
-		<div class="document">
-
-
-<div class="section" id="introduction">
-<h1>Introduction</h1>
-<p><strong>FRAG</strong> is a cross-platform 2D (eventually 3D) game creation framework for the Nim programming language.
-It is still very early in its development lifecycle so if you decide to use it, please understand it will be rough around the edges.
-Please also note that this documentation may be incomplete and or may rapidly change.</p>
-</div>
-<div class="section" id="dependencies">
-<h1>Dependencies</h1>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/nim-lang/Nim.git">Nim</a></li>
-<li><a class="reference external" href="https://github.com/nim-lang/nimble">Nimble</a></li>
-<li><a class="reference external" href="https://github.com/bkaradzic/GENie">GENie</a></li>
-<li><a class="reference external" href="https://www.libsdl.org/download-2.0.php">SDL2</a></li>
-<li><a class="reference external" href="https://www.libsdl.org/projects/SDL_image/">SDL_image</a></li>
-</ul>
-<p>Instructions for building and installing the above listed dependencies, are outside of the scope of this document.</p>
-</div>
-<div class="section" id="installation-instructions">
-<h1>Installation Instructions</h1>
-<ol class="arabic simple">
-<li>Clone the project from its <a class="reference external" href="https://github.com/fragworks/frag">Github repository</a>:</li>
-</ol>
-<pre class="code bash literal-block">
-$ git clone https://github.com/fragworks/frag.git <span class="operator">&amp;&amp;</span> <span class="name builtin">cd</span> frag
-</pre>
-<ol class="arabic simple" start="2">
-<li>Clone and update submodules:</li>
-</ol>
-<pre class="code bash literal-block">
-$ git submodule update --init vendor/bx vendor/bgfx vendor/bimg
-</pre>
-<p>Note: Android and Chipmunk2D support are both optional and very experimental. If desired, add <cite>platforms/android</cite> and | or <cite>vendor/Chipmunk2D</cite> to the list of submodules respectively.</p>
-<ol class="arabic simple" start="3">
-<li>Install Nim dependencies via nimble:</li>
-</ol>
-<pre class="code bash literal-block">
-$ nimble install -y
-</pre>
-<ol class="arabic simple" start="4">
-<li>Run the nake command to get a list of operating systems and architectures framework dependencies can be built for:</li>
-</ol>
-<pre class="code bash literal-block">
-$ nake
-
- Available tasks:
- android-arm-debug32 - Build debug versions of FRAG dependencies <span class="keyword">for</span> ARM <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- linux-debug32 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Linux <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- linux-debug64 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Linux <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
- osx-debug32 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> OSX <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- osx-debug64 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> OSX <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
- osx-release32 - Build release verisons of FRAG dependencies <span class="keyword">for</span> OSX <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- osx-release64 - Build release verisons of FRAG dependencies <span class="keyword">for</span> OSX <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
- win-debug32 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Windows <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- win-debug64 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Windows <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
- win-release32 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Windows <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- win-release64 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Windows <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
-</pre>
-<ol class="arabic simple" start="5">
-<li>Run the appropriate nake task(s) depending on the operating system and architecture you plan on targeting for your project:</li>
-</ol>
-<pre class="code bash literal-block">
-$ nake osx-release64
-</pre>
-</div>
-<div class="section" id="examples">
-<h1>Examples</h1>
-<p><strong>FRAG</strong> ships with a number of examples which serve a dual purpose:</p>
-<ol class="arabic simple">
-<li>System tests for the framework.</li>
-<li>Examples of framework features.</li>
-</ol>
-<p>These examples don't necessarily exhibit best practices for using the framework. Refer to the <a class="reference external" href="#samples">Samples</a> section .</p>
-<p>To get a list of examples simply run the nake command in the <cite>examples</cite> directory:</p>
-<pre class="code bash literal-block">
-$ <span class="name builtin">cd</span> examples <span class="operator">&amp;&amp;</span> nake
-
- Available tasks:
- D00 - Desktop : Run example hello-world
- D01 - Desktop : Run example sprite-batch
- D02 - Desktop : Run example audio
- D03 - Desktop : Run example input
- D04 - Desktop : Run example sprite-animation
- D05 - Desktop : Run example gui
- D06 - Desktop : Run example physics
- A00 - Android : Run example hello-world
-</pre>
-<p>Then run the appropriate nake task for the example you would like to run, ex:</p>
-<pre class="code bash literal-block">
-$ nake D00
-</pre>
-</div>
-<div class="section" id="id1">
-<h1>Samples</h1>
-<p>Samples are currently in development. As they are finished, instructions for installing and running them will appear here.</p>
-</div>
-</div>
-	
-
+<body>
+	<section class="hero is-medium has-text-centered">
+		<div class="hero-head">
+			<div class="container">
+				<nav class="nav">
+					<div class="nav-left">
+						<a class="nav-item is-brand" href="http://fragworks.io/">
+							<img src="images/logo.svg" width="32" alt="">
+							FRAG
+						</a>
 					</div>
-				</div>
+					<div class="nav-center">
+						<a class="nav-item" href="https://github.com/fragworks/frag">
+							<span class="icon">
+								<i class="fa fa-github"></i>
+							</span>
+						</a>
+						<a class="nav-item" href="https://twitter.com/">
+						<span class="icon">
+							<i class="fa fa-twitter"></i>
+						</span>
+						</a>
+					</div>
+					<div class="nav-right nav-menu">
+						<a class="nav-item is-active" href="http://fragworks.io/">
+							Home
+						</a>
+						
+						<a class="nav-item" href="/community/index/">
+							Community
+						</a>
+						
+						<a class="nav-item" href="/documentation/index/">
+							Documentation
+						</a>
+						
+						<a class="nav-item" href="/roadmap/index/">
+							Roadmap
+						</a>
+						
+					</div>
+				</nav>
 			</div>
-			
-			<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-	<div class="sphinxsidebarwrapper">
-		<p class="logo">
-			<a href="http://fragworks.io/">
-				<img class="logo" src="http://fragworks.io/logo.png" alt="Logo"/>
-				<h1 class="logo logo-name">FRAG</h1>
-			</a>
-		</p>
-		
-		<p class="blurb">Framework for Rather Awesome Games.</p>
-
-		
-
-	<p>
-		<iframe src="https://ghbtns.com/github-btn.html?user=fragworks&repo=frag&type=watch&count=true&size=large"
-		allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
-	</p>
-
-	<p>
-		<a href="https://travis-ci.org/fragworks/frag">
-			<img
-			alt="https://secure.travis-ci.org/fragworks/frag.svg?branch=master"
-			src="https://secure.travis-ci.org/fragworks/frag.svg?branch=master"
-			/>
-		</a>
-	</p>
-
-	
-		
-
-		
-
-<h3>Navigation</h3>
-<ul>
-	
-	<li class="toctree-l1">
-		<a class="reference internal" href="/community/index/">Community</a>
-	</li>
-	
-	<li class="toctree-l1">
-		<a class="reference internal" href="/index/">Framework for Rather Awesome Games</a>
-	</li>
-	
-	<li class="toctree-l1">
-		<a class="reference internal" href="/roadmap/index/">Roadmap</a>
-	</li>
-	
-</ul>
-
-
-		
-
-	</div>
-</div>
-<div class="clearer"></div>
-</div>
-			<div class="footer">
-	&copy; 2017 <a href="https://github.com/fragworks">Fragworks</a>
-	|
-	Powered by <a href="http://gohugo.io/">Hugo 0.20</a>
-	&amp; <a href="https://github.com/digitalcraftsman/hugo-alabaster-theme">Alabaster</a>
-	
-</div>
-
-<a href="https://github.com/fragworks/frag" class="github">
-    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" class="github"/>
-</a>
-
-
-			
-
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
-			<script>hljs.initHighlightingOnLoad();</script>
-			
-
-			
 		</div>
-	</body>
+	<main>
+		    <div class="hero-body">
+        <div class="container">
+            <p id="b">
+                <svg viewBox="0 0 209 376" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+                    <g>
+                        <path id="p2" class="st0" d="M106.9,3.9c4.6-4.1,12.6-4.3,16.9,0.3c3.3,3.7,2.9,9.3,1,13.6c-1.7,3.6-5.7,4.9-9.1,6.2
+                            c1.5,9.8,1.1,19.8,4,29.3c1.3,4.4,4.4,9,9.3,9.7c4.9,0.8,9.2-2.4,12.2-5.9c5-6,8.5-13.2,13.3-19.4c-1.2-3.3-2.9-6.4-3.4-9.8
+                            c0-5,4.3-11.2,9.9-9.8c6,1.8,10.6,9,8.4,15.2c-1.7,4-6.6,4.3-10.3,4.9c-1.4,9.5-4.6,18.9-3.5,28.5c0.4,4.3,3.7,8.5,8.3,8.5
+                            c6.3-0.3,11.5-4.4,16.7-7.6c4.3-2.9,9.5-5.2,11.9-10.1c1.8-3.3,1.1-7.2,0.7-10.7c2.4-2.1,5.3-4.3,8.7-3.2c5.3,2,8,9.4,5,14.2
+                            c-2.2,3.3-6.6,2.7-10,2.8c-16.2,27.5-33.8,54.2-50.9,81.1c-5.4-6.2-11.6-11.8-18.4-16.3c-3.1-2.1-6.9-2.4-10.5-2.8
+                            c-14.3-1.2-28.6-2.6-43-3.6c-9.3-0.7-19.1-1.6-28,2.2c-1.5-6.1-2.4-12.3-4.2-18.3c-6.5-22-13.9-43.7-19.4-66
+                            c-2.5-0.8-5.4-1.2-7.3-3.2C10.5,28.5,15,18.7,22,18.5c3.8,0.1,5.9,3.7,8,6.4c-0.5,3.2-1.1,6.6-3.5,9.1c4.8,6.7,8.6,14.2,14.4,20.2
+                            c3.5,3.6,8.9,6.5,14,4.8c4-1.6,5.8-6.1,6.7-10c1.7-7.5,2.1-15.3,3.3-22.9c-2.3-1.2-5-2.1-6.6-4.2c-4.1-5.2-2-14.6,4.9-16.3
+                            C69.5,3.4,75.9,9.6,75.3,16c0.2,3.9-2.9,6.7-5.9,8.7c3.2,8.6,4.3,18,9,26c2.3,4.1,6.8,7.3,11.6,6.4c4.8-0.9,7.9-5.1,10.1-9.1
+                            c4.2-7.8,6.5-16.4,10.7-24.1c-2.4-2.5-5.3-4.5-6.9-7.6C102.3,12.1,103.5,6.9,106.9,3.9"/>
+                    </g>
+                    <g>
+                        <path id="p3" class="st0" d="M46.1,121.3c8.8-3.8,18.6-2.9,28-2.2c14.3,1,28.7,2.3,43,3.6c3.6,0.4,7.4,0.6,10.5,2.8
+                            c6.9,4.6,13,10.1,18.4,16.3c10.3,12,18.2,25.9,25.5,39.9c4.1,8.4,8.1,17.1,10.2,26.2c1.9,7.9,2.1,16.1,2.1,24.2
+                            c-0.4,19.2-1,38.5-2.5,57.7c-0.5,4.1-0.3,8.7-3.2,12c-2.3-4.9-2.6-10.3-3.1-15.6c-1.6-18.4-2.3-36.9-3.8-55.4
+                            c-0.5-6.3-1.5-12.7-4.6-18.4c-7.1-13.7-14.8-27-22.9-40.1c-3.1-5.2-6.7-10.2-11.3-14.3c-1.4,2.3-2.7,4.6-4.1,6.8
+                            c12.8,10.4,17.9,28.6,12.7,44.2c3.9,7.3,8,14.6,11.9,21.9c-1.6,2.5-3.2,4.9-4.8,7.4c3.9,1.9,7.7,3.9,11.5,5.9
+                            c1.7,9.4,3.4,18.7,5.2,28.1c-2.7,3.1-5.3,6.3-8.1,9.3c1.2,1.8,2.5,3.5,3.8,5.3c-1.8,8.3-3.8,16.6-5.7,24.9
+                            c-2.8,1.4-5.6,2.9-8.4,4.4c1.2,1.6,2.4,3.3,3.6,4.9c-3.2,6.2-5.8,12.7-9.3,18.8c-2.8,2-6.2,2.9-9.3,4.3c0,3.5,0,6.9,0,10.4
+                            c-7.4,7.1-14.9,13.9-22.4,20.8c-18.2,0-36.3,0-54.5,0c-8.4-8.8-16.8-17.7-25.1-26.6c0.2-2,0.5-4.1,0.7-6.1c-3.5-1.8-7.4-3-10.4-5.4
+                            c-4.7-6.7-9-13.7-13.5-20.6c1.7-2.8,3.4-5.7,5-8.5c-2.6-1.8-5.5-3.2-7.8-5.5C2,295.6,1.3,288.3,0,281v-0.7c2.2-2.4,4.4-4.6,6.7-6.9
+                            c-2-3.1-4-6.2-5.9-9.2c2-7.9,3.6-16,6-23.8c1.9-2,4.6-3.1,6.9-4.6c-1-2.3-2-4.6-3-6.9c4.1-6.6,8.5-13.1,13.2-19.3
+                            c1.7-2.2,3.6-4.6,6.3-5.5c3.4-1.2,7.1-1.2,10.7-1.7c5.9-7.4,11.7-14.8,17.5-22.1c-2.2-10.2-2-20.7-2.4-31.1c-5.6,1-12,2.4-17.1-1
+                            c-4.4-2.8-5.6-8.5-4.4-13.3C35.3,128.6,40.3,123.6,46.1,121.3"/>
+                    </g>
+                </svg>
+                <svg viewBox="0 0 209 376" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+                    <image x="10" height="356" xlink:href="images/logo.svg" />
+                </svg>
+            </p>
+            <h1 id="frag" class="title">
+                FRAG
+            </h1>
+            <a id="modern-framework" class="subtitle" href="https://nim-lang.org">
+                A game development framework built with the <strong>Nim</strong> programming language
+            </a>
+        </div>
+    </div>
+</section>
+	</main>
+	<footer>
+		<p>&copy; 2017 <a href="http://fragworks.io/">FRAG</a></p>
+	</footer>
+</body>
 </html>
