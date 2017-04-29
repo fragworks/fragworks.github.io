@@ -4471,10 +4471,6 @@ label.panel-block {
     .media-content .notification {
       padding: .5em; } }
 @media screen and (min-width: 769px), print {
-  #spine {
-    width: 384px;
-    height: 216px; }
-
   #spine-description {
     display: flex;
     flex-direction: column; }
