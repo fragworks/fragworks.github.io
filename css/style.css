@@ -4460,7 +4460,11 @@ label.panel-block {
     width: 160px; }
     #b svg {
       width: 160px;
-      height: 160px; } }
+      height: 160px; }
+
+  #spine img {
+    width: 128px;
+    height: 72px; } }
 #frag {
   -webkit-animation: slideDown 500ms both;
   animation: slideDown 500ms both; }
