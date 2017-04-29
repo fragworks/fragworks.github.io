@@ -4469,7 +4469,10 @@ label.panel-block {
   .media-content {
     max-width: 100%; }
     .media-content .notification {
-      padding: .5em; } }
+      padding: .5em; }
+
+  #physics {
+    width: 800px; } }
 @media screen and (min-width: 769px), print {
   #spine-description {
     display: flex;
@@ -4571,6 +4574,9 @@ pre code {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.fw-icon-physics:before {
+  content: "\e907"; }
 
 .fw-icon-spine:before {
   content: "\e906"; }
