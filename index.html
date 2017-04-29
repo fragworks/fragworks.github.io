@@ -181,53 +181,53 @@
       <div class="column">
         <div id="markup">
           <figure class="highlight"><pre><code class="nim">
-            import
-              events
+  import
+    events
 
-            import
-              bgfxdotnim,
-              sdl2
+  import
+    bgfxdotnim,
+    sdl2
 
-            import
-              frag,
-              frag/config,
-              frag/graphics/window,
-              frag/logger,
-              frag/modules/graphics
+  import
+    frag,
+    frag/config,
+    frag/graphics/window,
+    frag/logger,
+    frag/modules/graphics
 
-            type
-              App = ref object
+  type
+    App = ref object
 
-            proc resize*(e: EventArgs) =
-              let event = SDLEventMessage(e).event
-              let sdlEventData = event.sdlEventData
-              let graphics = event.graphics
-              graphics.setViewRect(0, 0, 0, uint16 sdlEventData.window.data1, uint16 sdlEventData.window.data2)
+  proc resize*(e: EventArgs) =
+    let event = SDLEventMessage(e).event
+    let sdlEventData = event.sdlEventData
+    let graphics = event.graphics
+    graphics.setViewRect(0, 0, 0, uint16 sdlEventData.window.data1, uint16 sdlEventData.window.data2)
 
-            proc initApp(app: App, ctx: Frag) =
-              logDebug "Initializing game..."
-              ctx.events.on(SDLEventType.WindowResize, resize)
-              logDebug "Game initialized."
+  proc initApp(app: App, ctx: Frag) =
+    logDebug "Initializing game..."
+    ctx.events.on(SDLEventType.WindowResize, resize)
+    logDebug "Game initialized."
 
-            proc updateApp(app:App, ctx: Frag, deltaTime: float) =
-              discard
+  proc updateApp(app:App, ctx: Frag, deltaTime: float) =
+    discard
 
-            proc renderApp(app: App, ctx: Frag, deltaTime: float) =
-              ctx.graphics.clearView(0, ClearMode.Color.ord or ClearMode.Depth.ord, 0x303030ff, 1.0, 0)
+  proc renderApp(app: App, ctx: Frag, deltaTime: float) =
+    ctx.graphics.clearView(0, ClearMode.Color.ord or ClearMode.Depth.ord, 0x303030ff, 1.0, 0)
 
-            proc shutdownApp(app: App, ctx: Frag) =
-              logDebug "Shutting down game..."
-              logDebug "Game shut down."
+  proc shutdownApp(app: App, ctx: Frag) =
+    logDebug "Shutting down game..."
+    logDebug "Game shut down."
 
-            startFrag(App(), Config(
-              rootWindowTitle: "Your game name",
-              rootWindowPosX: window.posUndefined, rootWindowPosY: window.posUndefined,
-              rootWindowWidth: 960, rootWindowHeight: 540,
-              resetFlags: ResetFlag.VSync,
-              logFileName: "your_game_name.log",
-              assetRoot: "../assets",
-              debugMode: BGFX_DEBUG_TEXT
-            ))</code></pre><button class="copy">Copy</button></figure>
+  startFrag(App(), Config(
+    rootWindowTitle: "Your game name",
+    rootWindowPosX: window.posUndefined, rootWindowPosY: window.posUndefined,
+    rootWindowWidth: 960, rootWindowHeight: 540,
+    resetFlags: ResetFlag.VSync,
+    logFileName: "your_game_name.log",
+    assetRoot: "../assets",
+    debugMode: BGFX_DEBUG_TEXT
+  ))</code></pre><button class="copy">Copy</button></figure>
         </div>
       </div>
       <div class="column">
