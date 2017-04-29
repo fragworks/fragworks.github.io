@@ -4446,7 +4446,8 @@ label.panel-block {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   -webkit-animation-timing-function: cubic-bezier(0, 0.71, 0.29, 1);
-  animation-timing-function: cubic-bezier(0, 0.71, 0.29, 1); }
+  animation-timing-function: cubic-bezier(0, 0.71, 0.29, 1);
+  padding: 10px; }
 
 @media screen and (max-width: 768px) {
   #b {
