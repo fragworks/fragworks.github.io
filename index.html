@@ -251,70 +251,28 @@
         Integration with <strong>Spine</strong>
       </a>
     </h3>
-    <h4 class="subtitle is-4">Just import and implement your game logic</h4>
-    <div id="grid" class="columns">
-      <div class="column">
-        <div id="markup">
-          <figure class="highlight"><pre><code class="nim">
-            import
-              events
-
-            import
-              bgfxdotnim,
-              sdl2
-
-            import
-              frag,
-              frag/config,
-              frag/graphics/window,
-              frag/logger,
-              frag/modules/graphics
-
-            type
-              App = ref object
-
-            proc resize*(e: EventArgs) =
-              let event = SDLEventMessage(e).event
-              let sdlEventData = event.sdlEventData
-              let graphics = event.graphics
-              graphics.setViewRect(0, 0, 0, uint16 sdlEventData.window.data1, uint16 sdlEventData.window.data2)
-
-            proc initApp(app: App, ctx: Frag) =
-              logDebug "Initializing game..."
-              ctx.events.on(SDLEventType.WindowResize, resize)
-              logDebug "Game initialized."
-
-            proc updateApp(app:App, ctx: Frag, deltaTime: float) =
-              discard
-
-            proc renderApp(app: App, ctx: Frag, deltaTime: float) =
-              ctx.graphics.clearView(0, ClearMode.Color.ord or ClearMode.Depth.ord, 0x303030ff, 1.0, 0)
-
-            proc shutdownApp(app: App, ctx: Frag) =
-              logDebug "Shutting down game..."
-              logDebug "Game shut down."
-
-            startFrag(App(), Config(
-              rootWindowTitle: "Your game name",
-              rootWindowPosX: window.posUndefined, rootWindowPosY: window.posUndefined,
-              rootWindowWidth: 960, rootWindowHeight: 540,
-              resetFlags: ResetFlag.VSync,
-              logFileName: "your_game_name.log",
-              assetRoot: "../assets",
-              debugMode: BGFX_DEBUG_TEXT
-            ))</code></pre><button class="copy">Copy</button></figure>
-        </div>
-      </div>
-      <div class="column">
-        <div class="box">
-          <article class="media">
-            <figure class="image">
-                <img src="images/frag02.png" alt="Image">
-              </figure>
-          </article>
-        </div>
-      </div>
+    <h4 class="subtitle is-4">2d skeletal animation at your fingertips</h4>
+    <div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image" id="spine">
+        <img src="images/frag02.png" alt="Image">
+      </figure>
     </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          Add stunning 2d animation to your project with <a href="http://esotericsoftware.com/spine-in-depth"><strong>Spine</strong></a> <small>by</small> <small>Esoteric Software</small>
+        </p>
+        <div class="notification is-info">
+          Using Spine in your project requires a Spine license. See <a href="https://esotericsoftware.com/spine-purchase">https://esotericsoftware.com/spine-purchase</a> for details.
+        </div>
+      </div>
+      
+    </div>
+  </article>
+</div>
+    
 </section>
 	</main>
 	<footer>

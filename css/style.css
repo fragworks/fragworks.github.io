@@ -4534,6 +4534,10 @@ pre code {
   border-right-width: 1px;
   right: 50px; }
 
+#spine {
+  width: 384px;
+  height: 216px; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("/fonts/icomoon.eot?naiuvb");
