@@ -4473,7 +4473,14 @@ label.panel-block {
 @media screen and (min-width: 769px), print {
   #spine {
     width: 384px;
-    height: 216px; } }
+    height: 216px; }
+
+  #spine-description {
+    display: flex;
+    flex-direction: column; }
+
+  .media-content {
+    display: flex; } }
 #frag {
   -webkit-animation: slideDown 500ms both;
   animation: slideDown 500ms both; }
