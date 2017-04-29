@@ -99,6 +99,7 @@
             <h2 id="modern-framework" class="subtitle">
                 A game development framework built with the <strong>Nim</strong> programming language
             </h2>
+            <pre id="nimble"><code>nimble install frag</code></pre>
             <div id="ghbtns" class="block">
                 <iframe src="https://ghbtns.com/github-btn.html?user=fragworks&amp;repo=frag&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
                 <iframe src="https://ghbtns.com/github-btn.html?user=fragworks&amp;repo=frag&amp;type=fork&amp;count=false&amp;size=large" frameborder="0" scrolling="0" width="80px" height="30px"></iframe>
@@ -160,6 +161,65 @@
           <p class="subtitle">Open source on <strong>GitHub</strong></p>
         </a>
       </nav>
+    </div>
+  </div>
+</section>
+<section class="section is-medium">
+  <div class="container">
+    <h3 class="title is-2">
+      <a href="http://bulma.io/documentation/grid/columns">
+        <span class="icon is-medium">
+          <i class="fa  fa-retweet "></i>
+        </span>
+        Extendable <strong>game loop</strong>
+      </a>
+    </h3>
+    <h4 class="subtitle is-4">Just import and implement your game logic</h4>
+    <div id="markup">
+<figure class="highlight"><pre><code>
+import
+  events
+
+import
+  frag,
+  frag/config,
+  frag/graphics/window,
+  frag/logger,
+  frag/modules/graphics
+
+type
+  App = ref object
+
+proc resize*(e: EventArgs) =
+  let event = SDLEventMessage(e).event
+  let sdlEventData = event.sdlEventData
+  let graphics = event.graphics
+  graphics.setViewRect(0, 0, 0, uint16 sdlEventData.window.data1, uint16 sdlEventData.window.data2)
+
+proc initApp(app: App, ctx: Frag) =
+  logDebug "Initializing game..."
+  ctx.events.on(SDLEventType.WindowResize, resize)
+  logDebug "Game initialized."
+
+proc updateApp(app:App, ctx: Frag, deltaTime: float) =
+  discard
+
+proc renderApp(app: App, ctx: Frag, deltaTime: float) =
+  ctx.graphics.clearView(0, ClearMode.Color.ord or ClearMode.Depth.ord, 0x303030ff, 1.0, 0)
+
+proc shutdownApp(app: App, ctx: Frag) =
+  logDebug "Shutting down game..."
+  logDebug "Game shut down."
+
+startFrag(App(), Config(
+  rootWindowTitle: "Your game name",
+  rootWindowPosX: window.posUndefined, rootWindowPosY: window.posUndefined,
+  rootWindowWidth: 960, rootWindowHeight: 540,
+  resetFlags: ResetFlag.VSync,
+  logFileName: "your_game_name.log",
+  assetRoot: "../assets"
+))
+  </code></pre><button class="copy">Copy</button></figure>
     </div>
   </div>
 </section>
