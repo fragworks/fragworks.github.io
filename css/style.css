@@ -4460,7 +4460,20 @@ label.panel-block {
     width: 160px; }
     #b svg {
       width: 160px;
-      height: 160px; } }
+      height: 160px; }
+
+  .media {
+    display: flex;
+    flex-direction: column; }
+
+  .media-content {
+    max-width: 100%; }
+    .media-content .notification {
+      padding: .5em; } }
+@media screen and (min-width: 769px), print {
+  #spine {
+    width: 384px;
+    height: 216px; } }
 #frag {
   -webkit-animation: slideDown 500ms both;
   animation: slideDown 500ms both; }
@@ -4533,10 +4546,6 @@ pre code {
 .highlight .expand {
   border-right-width: 1px;
   right: 50px; }
-
-#spine {
-  width: 384px;
-  height: 216px; }
 
 @font-face {
   font-family: 'icomoon';
