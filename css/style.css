@@ -4583,6 +4583,9 @@ pre code {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.fw-icon-gitter:before {
+  content: "\e908"; }
+
 .fw-icon-physics:before {
   content: "\e907"; }
 
