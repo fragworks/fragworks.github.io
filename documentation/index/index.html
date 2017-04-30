@@ -16,187 +16,159 @@
 	<meta name="generator" content="Hugo 0.20" />
 </head>
 <body>
-	<section class="hero is-medium has-text-centered">
-		<div class="hero-head">
-			<div class="container">
-				<nav class="nav">
-					<div class="nav-left">
-						<a class="nav-item is-brand" href="http://fragworks.io/">
-							<img src="images/logo.svg" width="32" alt="">
-							FRAG
-						</a>
-					</div>
-					<div class="nav-center">
-						<a class="nav-item" href="https://github.com/fragworks/frag">
-							<span class="icon">
-								<i class="fa fa-github"></i>
-							</span>
-						</a>
-						<a class="nav-item" href="https://twitter.com/hahaitsfunny">
-						<span class="icon">
-							<i class="fa fa-twitter"></i>
-						</span>
-						</a>
-					</div>
-					<div class="nav-right nav-menu">
-						<a class="nav-item is-active" href="http://fragworks.io/">
-							Home
-						</a>
-						
-						<a class="nav-item" href="/community/index/">
-							Community
-						</a>
-						
-						<a class="nav-item" href="/documentation/index/">
-							Documentation
-						</a>
-						
-						<a class="nav-item" href="/roadmap/index/">
-							Roadmap
-						</a>
-						
-					</div>
-				</nav>
+	<div class="container">
+		<nav class="nav">
+			<div class="nav-left">
+				<a class="nav-item is-brand" href="http://fragworks.io/">
+					<img src="http://fragworks.io/images/logo.svg" width="32" alt="FRAG: Framework for Rather Awesome Games">
+					FRAG
+				</a>
 			</div>
-		</div>
-	<main>
-		<article>
-			<h1>Documentation</h1>
-			<time>13.04.2017 00:01</time>
-			<div>
-				<div class="document">
-
-
-<div class="section" id="introduction">
-<h1>Introduction</h1>
-<p><strong>FRAG</strong> is a cross-platform 2D (eventually 3D) game creation framework for the Nim programming language.
-It is still very early in its development lifecycle so if you decide to use it, please understand it will be rough around the edges.
-Please also note that this documentation may be incomplete and or may rapidly change.</p>
-</div>
-<div class="section" id="dependencies">
-<h1>Dependencies</h1>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/nim-lang/Nim.git">Nim</a></li>
-<li><a class="reference external" href="https://github.com/nim-lang/nimble">Nimble</a></li>
-<li><a class="reference external" href="https://github.com/bkaradzic/GENie">GENie</a></li>
-<li><a class="reference external" href="https://www.libsdl.org/download-2.0.php">SDL2</a></li>
-<li><a class="reference external" href="https://www.libsdl.org/projects/SDL_image/">SDL_image</a></li>
-</ul>
-<p>Instructions for building and installing the above listed dependencies, are outside of the scope of this document.</p>
-</div>
-<div class="section" id="installation-instructions">
-<h1>Installation Instructions</h1>
-<ol class="arabic simple">
-<li>Clone the project from its <a class="reference external" href="https://github.com/fragworks/frag">Github repository</a>:</li>
-</ol>
-<pre class="code bash literal-block">
-$ git clone https://github.com/fragworks/frag.git <span class="operator">&amp;&amp;</span> <span class="name builtin">cd</span> frag
-</pre>
-<ol class="arabic simple" start="2">
-<li>Clone and update submodules:</li>
-</ol>
-<pre class="code bash literal-block">
-$ git submodule update --init vendor/bx vendor/bgfx vendor/bimg
-</pre>
-<p>Note: Android and Chipmunk2D support are both optional and very experimental. If desired, add <cite>platforms/android</cite> and | or <cite>vendor/Chipmunk2D</cite> to the list of submodules respectively.</p>
-<ol class="arabic simple" start="3">
-<li>Install Nim dependencies via nimble:</li>
-</ol>
-<pre class="code bash literal-block">
-$ nimble install -y
-</pre>
-<ol class="arabic simple" start="4">
-<li>Run the nake command to get a list of operating systems and architectures framework dependencies can be built for:</li>
-</ol>
-<pre class="code bash literal-block">
-$ nake
-
- Available tasks:
- android-arm-debug32 - Build debug versions of FRAG dependencies <span class="keyword">for</span> ARM <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- linux-debug32 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Linux <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- linux-debug64 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Linux <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
- osx-debug32 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> OSX <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- osx-debug64 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> OSX <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
- osx-release32 - Build release verisons of FRAG dependencies <span class="keyword">for</span> OSX <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- osx-release64 - Build release verisons of FRAG dependencies <span class="keyword">for</span> OSX <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
- win-debug32 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Windows <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- win-debug64 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Windows <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
- win-release32 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Windows <span class="literal number">32</span>-bit instruction <span class="name builtin">set</span>
- win-release64 - Build debug verisons of FRAG dependencies <span class="keyword">for</span> Windows <span class="literal number">64</span>-bit instruction <span class="name builtin">set</span>
-</pre>
-<ol class="arabic simple" start="5">
-<li>Run the appropriate nake task(s) depending on the operating system and architecture you plan on targeting for your project:</li>
-</ol>
-<pre class="code bash literal-block">
-$ nake osx-release64
-</pre>
-</div>
-<div class="section" id="examples">
-<h1>Examples</h1>
-<p><strong>FRAG</strong> ships with a number of examples which serve a dual purpose:</p>
-<ol class="arabic simple">
-<li>System tests for the framework.</li>
-<li>Examples of framework features.</li>
-</ol>
-<p>These examples don't necessarily exhibit best practices for using the framework. Refer to the <a class="reference external" href="#samples">Samples</a> section .</p>
-<p>To get a list of examples simply run the nake command in the <cite>examples</cite> directory:</p>
-<pre class="code bash literal-block">
-$ <span class="name builtin">cd</span> examples <span class="operator">&amp;&amp;</span> nake
-
- Available tasks:
- D00 - Desktop : Run example hello-world
- D01 - Desktop : Run example sprite-batch
- D02 - Desktop : Run example audio
- D03 - Desktop : Run example input
- D04 - Desktop : Run example sprite-animation
- D05 - Desktop : Run example gui
- D06 - Desktop : Run example physics
- A00 - Android : Run example hello-world
-</pre>
-<p>Then run the appropriate nake task for the example you would like to run, ex:</p>
-<pre class="code bash literal-block">
-$ nake D00
-</pre>
-</div>
-<div class="section" id="id1">
-<h1>Samples</h1>
-<p>Samples are currently in development. As they are finished, instructions for installing and running them will appear here.</p>
-</div>
-</div>
+			<div class="nav-center">
+				<a class="nav-item" href="https://github.com/fragworks/frag">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				<a class="nav-item" href="https://twitter.com/hahaitsfunny">
+				<span class="icon">
+					<i class="fa fa-twitter"></i>
+				</span>
+				</a>
 			</div>
-			<div>
-				<ul id="tags">
-					
-				</ul>
-			</div>
-			<div>
+			<div class="nav-right nav-menu">
+				<a class="nav-item is-active" href="http://fragworks.io/">
+					Home
+				</a>
 				
+				<a class="nav-item" href="/documentation/index/">
+					Documentation
+				</a>
+				
+				<a class="nav-item" href="/roadmap/index/">
+					Roadmap
+				</a>
+				
+				<div class="nav-item">
+					<div class="field is-grouped">
+						<p class="control">
+							<a id="twitter" class="button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://fragworks.io" target="_blank" href="https://twitter.com/intent/tweet?text=FRAG: a game development framework built with @nim_lang %23FRAG&amp;url=http://fragworks.io&amp;via=hahaitsfunny">
+								<span class="icon">
+								<i class="fa fa-twitter"></i>
+								</span>
+								<span>Tweet</span>
+							</a>
+						</p>
+					</div>
+				</div>
 			</div>
-		</article>
-	</main>
-	<aside>
-		<div>
-			<div>
-				<h3>LATEST POSTS</h3>
-			</div>
-			<div>
-				<ul>
-					
-					<li><a href="http://fragworks.io/community/index/">Community</a></li>
-					
-					<li><a href="http://fragworks.io/roadmap/index/">Roadmap</a></li>
-					
-					<li><a href="http://fragworks.io/documentation/index/">Documentation</a></li>
-					
-					<li><a href="http://fragworks.io/categories/">Categories</a></li>
-					
-					<li><a href="http://fragworks.io/community/">Communities</a></li>
-					
-				</ul>
-			</div>
+		</nav>
 		</div>
-	</aside>
+	
+	<main>
+		<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            Documentation
+          </p>
+          <p class="subtitle">
+            Everything you need to <strong>create a game</strong> with Frag
+          </p>
+        </div>
+        <div class="column">
+          <div class="notification is-warning">
+            <p>
+              Documentation is still very much a work in progress. Please understand there may be rapid changes to this section of the website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          <li class="is-active">
+            <a href="">Overview</a>
+          </li>
+          <li>
+            <a href="">Graphics</a>
+          </li>
+          <li>
+            <a href="">Audio</a>
+          </li>
+          <li>
+            <a href="">Input</a>
+          </li>
+          <li>
+            <a href="">GUI</a>
+          </li>
+          <li>
+            <a href="">Utilities</a>
+          </li>
+          <li>
+            <a href="">Tooling</a>
+          </li>
+          <li>
+            <a href="">API Docs</a>
+          </li>
+        </ul>
+      </nav></div>
+    </div>
+  
+</section>
+		<p><nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item is-tab is-active" href="">
+        Start
+      </a>
+      <a class="nav-item is-tab" href="/documentation/dependencies">
+        Dependencies
+      </a>
+      <a class="nav-item is-tab" href="">
+        Customize
+      </a>
+    </div>
+  </div>
+</nav>
+<section class="section">
+  <div class="container">
+    <h1 class="title"><strong>2</strong> ways to start</h1>
+    <hr>
+    <article class="media is-large">
+      <div class="media-left">
+        <p class="title is-5">1</p>
+      </div>
+      <div class="media-content">
+        <p class="title is-5">
+          Use <strong>Nimble</strong> <em>(recommended)</em>:
+        </p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nimble install frag</code></pre><button class="copy">Copy</button></figure>
+      </div>
+    </article>
+    <article class="media is-large">
+      <div class="media-left">
+        <p class="title is-5">2</p>
+      </div>
+      <div class="media-content">
+        <p class="title is-5">
+          Clone the <strong>repository</strong> and install from <strong>source</strong> <em>(advanced)</em>:
+        </p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git@github.com:fragworks/frag.git &amp;&amp; cd frag
+nimble install -y
+</code></pre><button class="copy">Copy</button></figure>
+      </div>
+    </article>
+  </div>
+</section></p>
+
+	</main>
 	<footer class="footer">
 		<div class="container">
 			<div class="columns">
@@ -216,7 +188,7 @@ $ nake D00
 				<div id="social">
 					<iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=fragworks&amp;repo=frag&amp;type=star&amp;count=true&amp;size=large" allowtransparency="true" scrolling="0" frameborder="0" height="30px" width="160px"></iframe>
 
-					<iframe id="twitter-widget-1" scrolling="no" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 76px; height: 28px;" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.5c39137502ea1894df4434ae5ed041c5.en.html#dnt=false&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fbulma.io%2Fdocumentation%2Felements%2Fnotification%2F&amp;related=jgthms%3ACreator%20of%20Bulma&amp;size=l&amp;text=FRAG%3A%20a%20game%20development%20framework%20built%20with%20@nim_lang&amp;time=1493497446012&amp;type=share&amp;url=http%3A%2F%2Fbulma.io&amp;via=hahaitsfunny" data-url="http://bulma.io" frameborder="0"></iframe>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="FRAG: a game development framework built with @nim_lang" data-url="http://fragworks.io" data-via="hahaitsfunny" data-hashtags="FRAG" data-related="nim-lang" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</div>
 				</div>
 			</div>

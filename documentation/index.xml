@@ -6,19 +6,28 @@
     <description>Recent content in Documentations on FRAG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Apr 2017 00:01:53 -0400</lastBuildDate>
     
 	<atom:link href="http://fragworks.io/documentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Dependencies</title>
+      <link>http://fragworks.io/documentation/dependencies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fragworks.io/documentation/dependencies/</guid>
+      <description>Start  Dependencies  Customize     </description>
+    </item>
+    
+    <item>
       <title>Documentation</title>
       <link>http://fragworks.io/documentation/index/</link>
-      <pubDate>Thu, 13 Apr 2017 00:01:53 -0400</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fragworks.io/documentation/index/</guid>
-      <description>Introduction FRAG is a cross-platform 2D (eventually 3D) game creation framework for the Nim programming language. It is still very early in its development lifecycle so if you decide to use it, please understand it will be rough around the edges. Please also note that this documentation may be incomplete and or may rapidly change.
- Dependencies Nim Nimble GENie SDL2 SDL_image  Instructions for building and installing the above listed dependencies, are outside of the scope of this document.</description>
+      <description>Start  Dependencies  Customize     2 ways to start  1
+ Use Nimble (recommended): nimble install fragCopy   2
+ Clone the repository and install from source (advanced): git clone git@github.com:fragworks/frag.git &amp;amp;&amp;amp; cd frag nimble install -y Copy</description>
     </item>
     
   </channel>

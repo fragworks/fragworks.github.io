@@ -4269,6 +4269,14 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
+.field.is-grouped {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
 @media screen and (min-width: 769px), print {
   .hero.is-medium .hero-body {
     padding-bottom: 9rem;
@@ -4475,7 +4483,7 @@ label.panel-block {
     display: flex;
     flex-direction: column; }
 
-  .media-content {
+  .hero .media-content {
     display: flex; }
 
   #physics {
