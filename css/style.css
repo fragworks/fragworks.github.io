@@ -4469,17 +4469,17 @@ label.panel-block {
   .media-content {
     max-width: 100%; }
     .media-content .notification {
-      padding: .5em; }
-
-  #physics {
-    width: 800px; } }
+      padding: .5em; } }
 @media screen and (min-width: 769px), print {
   #spine-description {
     display: flex;
     flex-direction: column; }
 
   .media-content {
-    display: flex; } }
+    display: flex; }
+
+  #physics {
+    width: 800px; } }
 #frag {
   -webkit-animation: slideDown 500ms both;
   animation: slideDown 500ms both; }
