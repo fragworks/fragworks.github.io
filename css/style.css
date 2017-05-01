@@ -4532,6 +4532,9 @@ pre code {
   overflow-x: auto;
   padding: 1.25rem 1.5rem; }
 
+.hljs {
+  padding: 1.25rem 1.5rem !important; }
+
 .highlight {
   position: relative; }
 
