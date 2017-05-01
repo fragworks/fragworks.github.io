@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+	<script src="http://fragworks.io/js/fw.js"></script>
 	<link href="http://fragworks.io/index.xml" rel="feed" type="application/rss+xml" title="FRAG">
 	<meta name="generator" content="Hugo 0.20" />
 </head>
@@ -38,7 +40,12 @@
 						</span>
 						</a>
 					</div>
-					<div class="nav-right nav-menu">
+					<span id="nav-toggle" class="nav-toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+					<div id="nav-menu" class="nav-right nav-menu">
 						<a class="nav-item is-active" href="http://fragworks.io/">
 							Home
 						</a>
