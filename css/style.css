@@ -4541,6 +4541,9 @@ pre code {
 .highlight {
   position: relative; }
 
+.highlight pre {
+  max-height: 600px; }
+
 .highlight .copy,
 .highlight .expand {
   -webkit-touch-callout: none;

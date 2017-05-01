@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
       $('.modal').removeClass('is-active');
     }
   });
-
+*/
   var $highlights = $('.highlight');
 
   $highlights.each(function() {
@@ -61,5 +61,5 @@ jQuery(document).ready(function ($) {
       return trigger.previousSibling;
     }
   });
-*/
+
 });
