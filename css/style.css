@@ -4470,6 +4470,9 @@ label.panel-block {
       width: 160px;
       height: 160px; }
 
+  video {
+    width: 100%; }
+
   .media {
     display: flex;
     flex-direction: column; }
