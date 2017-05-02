@@ -220,6 +220,21 @@ startFrag(App(), Config(
           </div>
         </div>
         <p>During this phase of the game loop, the framework itself along with all of its subsystems will be initialized. The <strong>initApp</strong> procedure of the app object provided to the <strong>startFrag</strong> procedure, will also be invoked - allowing the FRAG application to execute whatever initialization logic it needs to.</p>
+        <div class="notification is-danger">
+          <h4 class="title is-2">
+          Update
+          </h4>
+          <h5 class="subtitle is-4">Your game logic goes here!</h5>
+        </div>
+        <p>Once the framework, subsystems, and application have all finished carrying out their initialization logic, the game loop actually begins.</p>
+        <p>During every iteration of the game loop, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L200"><strong>updateApp</strong></a> procedure will be called. This provides the application with a hook where it can implement whatever update logic it needs to.
+        </p>
+        <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L33"><div class="notification is-info">Example Game Code</div></a>
+        <figure class="highlight"><pre><code class="nim">
+proc updateApp(app:App, ctx: Frag, deltaTime: float) =
+  # Update application state here!
+  discard
+        </code></pre></figure>
       </div>
     </div>
   </div>
