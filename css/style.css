@@ -125,7 +125,7 @@ a {
 
 code {
   background-color: whitesmoke;
-  color: #ff3860;
+  color: #23241f;
   font-size: 0.8em;
   font-weight: normal;
   padding: 0.25em 0.5em 0.25em; }
@@ -4534,6 +4534,9 @@ pre code {
   font-size: 1em;
   overflow-x: auto;
   padding: 1.25rem 1.5rem; }
+
+figure.highlight.card-footer-item {
+  background: #23241f; }
 
 .notification pre, .notification pre code {
   background: #23241f; }
