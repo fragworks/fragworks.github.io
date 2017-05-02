@@ -7,6 +7,14 @@ jQuery(document).ready(function ($) {
     $(this).toggleClass('is-active');
     $menu.toggleClass('is-active');
   });
+
+  $('.menu-list li a').click(function() {
+    var id = $(this).attr('href');
+    $('.doc-content').hide();
+    $(id).show();
+    $('.menu-list li a').removeClass('is-active');
+    $(this).addClass('is-active');
+  });
 /*
   $('.modal-button').click(function() {
     var target = $(this).data('target');

@@ -4538,7 +4538,7 @@ pre code {
 figure.highlight.card-footer-item {
   background: #23241f; }
 
-.notification pre, .notification pre code {
+.notification pre, .notification pre code, .content pre, .content pre code {
   background: #23241f; }
 
 .hljs {
