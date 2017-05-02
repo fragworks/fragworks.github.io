@@ -4539,7 +4539,8 @@ figure.highlight.card-footer-item {
   background: #23241f; }
 
 .notification pre, .notification pre code, .content pre, .content pre code {
-  background: #23241f; }
+  background: #23241f;
+  margin-bottom: 0 !important; }
 
 .hljs {
   padding: 1.25rem 1.5rem !important; }
