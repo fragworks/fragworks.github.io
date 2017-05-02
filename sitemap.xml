@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fragworks.io/documentation/overview/</loc>
+  </url>
+  
+  <url>
     <loc>http://fragworks.io/roadmap/index/</loc>
     <lastmod>2017-04-13T11:11:53-04:00</lastmod>
   </url>
