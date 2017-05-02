@@ -136,9 +136,8 @@
   
 </section>
 		<section class="section">
-  <div class="container">
-    <div class="columns">
-    <div class="column is-3">
+  <div class="columns">
+    <div class="column is-4">
       <aside class="menu">
         <p class="menu-label">
           Introduction
@@ -161,7 +160,7 @@
         </p>
       </aside>
     </div>
-    <div class="column">
+    <div class="column is-8">
       <div class="content doc-content" id="concept">
         <h3 class="title is-2">
         The Concept
@@ -192,23 +191,23 @@
           <h5 class="subtitle is-4">Let's get things started...</h5>
         </div>
         <p>The initialization phase of the game loop begins when the <strong>startFrag</strong> procedure is called.</p>
-        <div class="columns">
-          <div class="column">
+        <div class="columns is-8">
+          <div class="column is-6">
             <div class="notification is-warning">Engine Code</div>
-              <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L136">
-                <figure class="highlight"><pre><code class="nim">
-proc startFrag*[T](app: T, config: Config) =
+            <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L136">
+            <figure class="highlight"><pre><code class="nim">
+  proc startFrag*[T](app: T, config: Config) =
   var ctx = Frag()
   ctx.init(config, app)
   app.initApp(ctx)
-                </code></pre></figure>
+            </code></pre></figure>
             </a>
           </div>
-          <div class="column">
+          <div class="column is-6">
             <div class="notification is-info">Example Game Code</div>
-              <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L54">
-                <figure class="highlight"><pre><code class="nim">
-startFrag(App(), Config(
+            <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L54">
+              <figure class="highlight"><pre><code class="nim">
+  startFrag(App(), Config(
   rootWindowTitle: "Frag Example 00-hello-world",
   rootWindowPosX: window.posUndefined, rootWindowPosY: window.posUndefined,
   rootWindowWidth: 960, rootWindowHeight: 540,
@@ -216,10 +215,10 @@ startFrag(App(), Config(
   logFileName: "example-00.log",
   assetRoot: "../assets",
   debugMode: BGFX_DEBUG_TEXT
-))
-                </code></pre></figure>
-              </a>
-            </div>
+  ))
+              </code></pre></figure>
+            </a>
+          </div>
         </div>
       </div>
     </div>
