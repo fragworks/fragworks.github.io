@@ -198,7 +198,7 @@
         <div class="notification card-footer-item">
           <div class="content">
             <h1 class="title">Compiling</h1>
-The compiler currently officially supports the following platform and architecture combinations:
+The Nim compiler currently officially supports the following platform and architecture combinations:
 <ul>
   <li>Windows (Windows XP or greater) - x86 and x86_64</li>
   <li>Linux (most, if not all, distributions) - x86, x86_64, ppc64 and armv6l</li>
@@ -208,14 +208,14 @@ More platforms are supported, however they are not tested regularly and they may
 
 <p>Compiling the Nim compiler is quite straightforward if you follow these steps:</p>
 
-<p>First, the C source of an older version of the Nim compiler is needed to bootstrap the latest version because the Nim compiler itself is written in the Nim programming language. Those C sources are available within the nim-lang/csources repository.</p>
+<p>First, the C source of an older version of the Nim compiler is needed to bootstrap the latest version because the Nim compiler itself is written in the Nim programming language. Those C sources are available within the <a href="https://github.com/nim-lang/csources"><strong>nim-lang/csources</strong></a> repository.</p>
 
 <p>Next, to build from source you will need:</p>
 
 <ul>
-<li>A C compiler such as gcc 3.x/later or an alternative such as clang, Visual C++ or Intel C++. It is recommended to use gcc 3.x or later.</li>
-<li>Either git or wget to download the needed source repositories.</li>
-<li>The build-essential package when using gcc on Ubuntu (and likely other distros as well).</li>
+<li>A C compiler such as <strong>gcc</strong> 3.x/later or an alternative such as clang, Visual C++ or Intel C++. It is recommended to use gcc 3.x or later.</li>
+<li>Either <strong>git</strong> or wget to download the needed source repositories.</li>
+<li>The <string>build-essential</strong> package when using gcc on Ubuntu (and likely other distros as well).</li>
 </ul>
 
 <p>Then, if you are on a *nix system or Windows, the following steps should compile Nim from source using gcc, git and the koch build tool (in the place of sh build.sh you should substitute build.bat on x86 Windows or build64.bat on x86_64 Windows):

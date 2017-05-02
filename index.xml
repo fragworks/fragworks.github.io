@@ -41,7 +41,7 @@ Pull requests are also welcome.</description>
       <guid>http://fragworks.io/documentation/dependencies/</guid>
       <description>Start  Dependencies  Customize        Nim
 version devel
-    Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.  High-performance garbage-collected language Compiles to C, C++ or JavaScript Produces dependency-free binaries Runs on Windows, macOS, Linux, and more   Windows, OSX, Linux  Nim Compilation Instructions  Compiling The compiler currently officially supports the following platform and architecture combinations:  Windows (Windows XP or greater) - x86 and x86_64 Linux (most, if not all, distributions) - x86, x86_64, ppc64 and armv6l Mac OS X (10.</description>
+    Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.  High-performance garbage-collected language Compiles to C, C++ or JavaScript Produces dependency-free binaries Runs on Windows, macOS, Linux, and more   Windows, OSX, Linux  Nim Compilation Instructions  Compiling The Nim compiler currently officially supports the following platform and architecture combinations:  Windows (Windows XP or greater) - x86 and x86_64 Linux (most, if not all, distributions) - x86, x86_64, ppc64 and armv6l Mac OS X (10.</description>
     </item>
     
     <item>
