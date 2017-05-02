@@ -4535,6 +4535,9 @@ pre code {
   overflow-x: auto;
   padding: 1.25rem 1.5rem; }
 
+.notification pre, .notification pre code {
+  background: #23241f; }
+
 .hljs {
   padding: 1.25rem 1.5rem !important; }
 
