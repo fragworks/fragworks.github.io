@@ -166,6 +166,94 @@
           <div class="media-left">
             <figure class="image">
               <a href="https://www.libsdl.org/index.php">
+                <img src="../../images/nim_logo.svg" alt="Nim">
+              </a>
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">Nim</p>
+            <p class="subtitle is-6">version devel</p>
+          </div>
+        </div>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>
+          Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.
+          </p>
+          <ul>
+            <li>High-performance garbage-collected language</li>
+            <li>Compiles to C, C++ or JavaScript</li>
+            <li>Produces dependency-free binaries</li>
+            <li>Runs on Windows, macOS, Linux, and more</li>
+        </div>
+      </div>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">Windows, OSX, Linux</strong>
+      </footer>
+      <footer class="card-footer"><br />
+        <a href="https://github.com/nim-lang/Nim#compiling" class="card-footer-item">Nim Compilation Instructions</a>
+      </footer>
+      <footer class="card-footer">
+        <div class="notification card-footer-item">
+          <div class="content">
+            <h1 class="title">Compiling</h1>
+The compiler currently officially supports the following platform and architecture combinations:
+<ul>
+  <li>Windows (Windows XP or greater) - x86 and x86_64</li>
+  <li>Linux (most, if not all, distributions) - x86, x86_64, ppc64 and armv6l</li>
+  <li>Mac OS X (10.04 or greater) - x86, x86_64 and ppc64</li>
+</ul>
+More platforms are supported, however they are not tested regularly and they may not be as stable as the above-listed platforms.</p>
+
+<p>Compiling the Nim compiler is quite straightforward if you follow these steps:</p>
+
+<p>First, the C source of an older version of the Nim compiler is needed to bootstrap the latest version because the Nim compiler itself is written in the Nim programming language. Those C sources are available within the nim-lang/csources repository.</p>
+
+<p>Next, to build from source you will need:</p>
+
+<ul>
+<li>A C compiler such as gcc 3.x/later or an alternative such as clang, Visual C++ or Intel C++. It is recommended to use gcc 3.x or later.</li>
+<li>Either git or wget to download the needed source repositories.</li>
+<li>The build-essential package when using gcc on Ubuntu (and likely other distros as well).</li>
+</ul>
+
+<p>Then, if you are on a *nix system or Windows, the following steps should compile Nim from source using gcc, git and the koch build tool (in the place of sh build.sh you should substitute build.bat on x86 Windows or build64.bat on x86_64 Windows):
+          </div>
+        </div>
+      </footer>
+      <footer>
+        <figure class="highlight card-footer-item">
+          <pre><code class="language-bash" data-lang="bash">
+  $ git clone <a href="https://github.com/nim-lang/Nim.git">https://github.com/nim-lang/Nim.git</a>
+  $ cd Nim
+  $ git clone &ndash;depth 1 <a href="https://github.com/nim-lang/csources.git">https://github.com/nim-lang/csources.git</a>
+  $ cd csources
+  $ sh build.sh
+  $ cd ../
+  $ bin/nim c koch
+  $ ./koch boot -d:release
+          </code></pre></figure>
+      </footer>
+      <footer class="card-footer">
+        <div class="notification card-footer-item">
+          <div class="content">
+Finally, once you have finished the build steps (on Windows, Mac or Linux) you should add the bin directory to your PATH.</p>
+
+<h1 class="title">Nimble</h1>
+
+<p>Nimble is Nim&rsquo;s package manager and it can be acquired from the <a href="https://github.com/nim-lang/nimble">nim-lang/nimble</a> repository. Assuming that you added Nim&rsquo;s bin directory to your PATH, you may install Nimble from source by running koch nimble within the root of the cloned repository.
+          </div>
+        </div>
+      </footer>
+    </div>
+    <hr>
+    <div class="card">
+      <header class="card-header">
+        <div class="media card-header-title">
+          <div class="media-left">
+            <figure class="image">
+              <a href="https://www.libsdl.org/index.php">
                 <img src="../../images/SDL_logo.png" alt="SDL">
               </a>
             </figure>
@@ -213,7 +301,7 @@
           <div class="media-left">
             <figure class="image">
               <a href="https://www.libsdl.org/index.php">
-                <img src="../../images/OpenAL_Logo.svg" alt="SDL">
+                <img src="../../images/OpenAL_Logo.svg" alt="OpenAL">
               </a>
             </figure>
           </div>

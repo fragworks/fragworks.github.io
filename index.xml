@@ -39,9 +39,9 @@ Pull requests are also welcome.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fragworks.io/documentation/dependencies/</guid>
-      <description>Start  Dependencies  Customize        SDL
-version 2.0.5 (stable)
-    Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including Valve&amp;rsquo;s award winning catalog and many Humble Bundle games. SDL officially supports Windows, Mac OS X, Linux, iOS, and Android.</description>
+      <description>Start  Dependencies  Customize        Nim
+version devel
+    Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.  High-performance garbage-collected language Compiles to C, C++ or JavaScript Produces dependency-free binaries Runs on Windows, macOS, Linux, and more   Windows, OSX, Linux  Nim Compilation Instructions  Compiling The compiler currently officially supports the following platform and architecture combinations:  Windows (Windows XP or greater) - x86 and x86_64 Linux (most, if not all, distributions) - x86, x86_64, ppc64 and armv6l Mac OS X (10.</description>
     </item>
     
     <item>
