@@ -72,7 +72,7 @@ devel version
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fragworks.io/documentation/gameloop/</guid>
-      <description>Introduction The Concept The Implementation  Initialization Framework Application  Update Render Shutdown   The Concept  Initialize. Update. Render. Shutdown.  Almost every game is constructed around a game loop, which serves a number of purposes.
+      <description>Introduction The Concept The Implementation  Framework Initialization  Application Initialization    The Concept  Initialize. Update. Render. Shutdown.  Almost every game is constructed around a game loop, which serves a number of purposes.
 Generally, a game loop is initiated and will run continuously until gameplay terminates. During each iteration of the game loop, a number of tasks are carried out. Tasks which are commonly executed during a single loop iteration include:</description>
     </item>
     

@@ -147,21 +147,17 @@
           <li><a href="#implementation">The Implementation</a></li>
         </ul>
         <p class="menu-label">
-          Initialization
+          Framework
         </p>
         <ul class="menu-list">
-          <li><a href="#init-framework">Framework</a></li>
-          <li><a href="#init-application">Application</a></li>
+          <li><a href="#init-framework">Initialization</a></li>
         </ul>
         <p class="menu-label">
-          Update
+          Application
         </p>
-        <p class="menu-label">
-          Render
-        </p>
-        <p class="menu-label">
-          Shutdown
-        </p>
+        <ul class="menu-list">
+          <li><a href="#init-application">Initialization</a></li>
+        </ul>
       </aside>
     </div>
     <div class="column is-8">
@@ -265,6 +261,13 @@ proc shutdownApp(app: App, ctx: Frag) =
       <div class="content doc-content" id="init-framework" style="display: none;">
         <h3 class="title is-2">
         Framework Initialization
+        </h3>
+        <h4 class="subtitle is-4">How FRAG Starts Up</h4>
+        <hr>
+      </div>
+      <div class="content doc-content" id="init-application" style="display: none;">
+        <h3 class="title is-2">
+        Application Initialization
         </h3>
         <h4 class="subtitle is-4">How FRAG Starts Up</h4>
         <hr>
