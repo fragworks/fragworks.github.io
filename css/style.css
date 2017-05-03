@@ -4577,6 +4577,10 @@ figure.highlight.card-footer-item {
   border-right-width: 1px;
   right: 50px; }
 
+.doc-content h4.title, .doc-content h5.subtitle {
+  border-left: 0.25rem solid #8451a1;
+  padding-left: 0.5rem; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("/fonts/icomoon.eot?naiuvb");

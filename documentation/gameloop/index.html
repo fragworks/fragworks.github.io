@@ -213,6 +213,7 @@ debugMode: BGFX_DEBUG_TEXT
 ))
         </code></pre></figure>
         <p>During this phase of the game loop, the framework itself along with all of its subsystems will be initialized. The <strong>initApp</strong> procedure of the app object provided to the <strong>startFrag</strong> procedure, will also be invoked - allowing the FRAG application to execute whatever initialization logic it needs to.</p>
+        <hr>
         <h4 class="title is-2">
         Update
         </h4>
@@ -226,6 +227,7 @@ proc updateApp(app:App, ctx: Frag, deltaTime: float) =
   # Update application state here!
   discard
         </code></pre></figure>
+        <hr>
         <h4 class="title is-2">
         Render
         </h4>
@@ -239,6 +241,7 @@ proc renderApp(app: App, ctx: Frag, deltaTime: float) =
   ctx.graphics.clearView(0, ClearMode.Color.ord or ClearMode.Depth.ord, 0x303030ff, 1.0, 0)
   # Perform application rendering here!
         </code></pre></figure>
+        <hr>
         <h4 class="title is-2">
         Shutdown
         </h4>
