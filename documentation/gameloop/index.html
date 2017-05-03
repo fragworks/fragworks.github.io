@@ -193,7 +193,7 @@
         <p>The initialization phase of the game loop begins when the <strong>startFrag</strong> procedure is called.</p>
         <div class="columns is-8">
           <div class="column is-6">
-            <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L136"><div class="notification is-warning">Engine Code</div></a>
+            <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L136"><div class="notification">Engine Code</div></a>
             <figure class="highlight"><pre><code class="nim">
 proc startFrag*[T](app: T, config: Config) =
   var ctx = Frag()
@@ -205,7 +205,8 @@ proc startFrag*[T](app: T, config: Config) =
             <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L54"><div class="notification is-info">Example Game Code</div></a>
             <figure class="highlight"><pre><code class="nim">
 proc initApp(app: App, ctx: Frag) =
-  logDebug "Initializing app..."
+  # Application initialization logic goes here!
+  discard
 
 startFrag(App(), Config(
   rootWindowTitle: "Frag Example 00-hello-world",
@@ -220,7 +221,7 @@ startFrag(App(), Config(
           </div>
         </div>
         <p>During this phase of the game loop, the framework itself along with all of its subsystems will be initialized. The <strong>initApp</strong> procedure of the app object provided to the <strong>startFrag</strong> procedure, will also be invoked - allowing the FRAG application to execute whatever initialization logic it needs to.</p>
-        <div class="notification is-danger">
+        <div class="notification is-warning">
           <h4 class="title is-2">
           Update
           </h4>
@@ -233,6 +234,38 @@ startFrag(App(), Config(
         <figure class="highlight"><pre><code class="nim">
 proc updateApp(app:App, ctx: Frag, deltaTime: float) =
   # Update application state here!
+  discard
+        </code></pre></figure>
+        <div class="notification is-primary">
+          <h4 class="title is-2">
+          Render
+          </h4>
+          <h5 class="subtitle is-4">Ready. Set. Draw.</h5>
+        </div>
+        <p>Along with the updateApp procedure, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L201"><strong>renderApp</strong></a> procedure will be called each frame. Similar to how application state updates should be performed during the updateApp invocation, any drawing that is to be done should be performed during this call.
+        </p>
+         <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L36"><div class="notification is-info">Example Game Code</div></a>
+        <figure class="highlight"><pre><code class="nim">
+proc renderApp(app: App, ctx: Frag, deltaTime: float) =
+  # Clear Color & Depth Buffers
+  ctx.graphics.clearView(0, ClearMode.Color.ord or ClearMode.Depth.ord, 0x303030ff, 1.0, 0)
+  # Perform application rendering here!
+        </code></pre></figure>
+        <div class="notification is-danger">
+          <h4 class="title is-2">
+          Shutdown
+          </h4>
+          <h5 class="subtitle is-4">Don't forget to clean up after yourself!</h5>
+        </div>
+        <p>The final phase of the game loop is the shutdown phase. This phase is entered when the framework calls the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L209"><strong>shutdownApp</strong></a> procedure.</p>
+
+        <p>For this phase to be entered, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L147"><strong>conditional check</strong></a> which was enforcing the actual loop of the game loop, must fail. This is generally caused by the end-user of the application closing it, or the application unexpectedly terminating.</p>
+
+        <p>During the invoation of the shutdownApp procedure, resources which are not automatically released by the framework, or garbage-collected, should be freed.</p>
+         <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L50"><div class="notification is-info">Example Game Code</div></a>
+        <figure class="highlight"><pre><code class="nim">
+proc shutdownApp(app: App, ctx: Frag) =
+  # Release resources here!
   discard
         </code></pre></figure>
       </div>
