@@ -202,7 +202,7 @@ proc startFrag*[T](app: T, config: Config) =
             </code></pre></figure>
           </div>
           <div class="column is-6">
-            <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L54"><div class="notification is-info">Example Game Code</div></a>
+            <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L54"><div class="notification">Example Game Code</div></a>
             <figure class="highlight"><pre><code class="nim">
 proc initApp(app: App, ctx: Frag) =
   # Application initialization logic goes here!
@@ -230,7 +230,7 @@ startFrag(App(), Config(
         <p>Once the framework, subsystems, and application have all finished carrying out their initialization logic, the game loop actually begins.</p>
         <p>During every iteration of the game loop, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L200"><strong>updateApp</strong></a> procedure will be called. This provides the application with a hook where it can implement whatever update logic it needs to.
         </p>
-        <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L33"><div class="notification is-info">Example Game Code</div></a>
+        <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L33"><div class="notification">Example Game Code</div></a>
         <figure class="highlight"><pre><code class="nim">
 proc updateApp(app:App, ctx: Frag, deltaTime: float) =
   # Update application state here!
@@ -244,7 +244,7 @@ proc updateApp(app:App, ctx: Frag, deltaTime: float) =
         </div>
         <p>Along with the updateApp procedure, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L201"><strong>renderApp</strong></a> procedure will be called each frame. Similar to how application state updates should be performed during the updateApp invocation, any drawing that is to be done should be performed during this call.
         </p>
-         <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L36"><div class="notification is-info">Example Game Code</div></a>
+         <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L36"><div class="notification">Example Game Code</div></a>
         <figure class="highlight"><pre><code class="nim">
 proc renderApp(app: App, ctx: Frag, deltaTime: float) =
   # Clear Color & Depth Buffers
@@ -262,7 +262,7 @@ proc renderApp(app: App, ctx: Frag, deltaTime: float) =
         <p>For this phase to be entered, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L147"><strong>conditional check</strong></a> which was enforcing the actual loop of the game loop, must fail. This is generally caused by the end-user of the application closing it, or the application unexpectedly terminating.</p>
 
         <p>During the invoation of the shutdownApp procedure, resources which are not automatically released by the framework, or garbage-collected, should be freed.</p>
-         <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L50"><div class="notification is-info">Example Game Code</div></a>
+         <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L50"><div class="notification">Example Game Code</div></a>
         <figure class="highlight"><pre><code class="nim">
 proc shutdownApp(app: App, ctx: Frag) =
   # Release resources here!
