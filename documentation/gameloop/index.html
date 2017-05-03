@@ -250,7 +250,7 @@ proc renderApp(app: App, ctx: Frag, deltaTime: float) =
 
         <p>For this phase to be entered, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L147"><strong>conditional check</strong></a> which was enforcing the actual loop of the game loop, must fail. This is generally caused by the end-user of the application closing it, or the application unexpectedly terminating.</p>
 
-        <p>During the invoation of the shutdownApp procedure, resources which are not automatically released by the framework, or garbage-collected, should be freed.</p>
+        <p>During the invocation of the shutdownApp procedure, resources which are not automatically released by the framework, or garbage-collected, should be freed.</p>
          <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L50"><div class="notification">Example Game Code</div></a>
         <figure class="highlight"><pre><code class="nim">
 proc shutdownApp(app: App, ctx: Frag) =
