@@ -129,7 +129,7 @@
             
           
             
-              <li class="is-active"><a class="nav-item is-active" href="/documentation/gameloop/">
+              <li><a class="nav-item" href="/documentation/gameloop/">
                 Game Loop
               </a></li>
             
@@ -141,7 +141,7 @@
             
           
             
-              <li><a class="nav-item" href="/documentation/event/">
+              <li class="is-active"><a class="nav-item is-active" href="/documentation/event/">
                 Event
               </a></li>
             
@@ -154,65 +154,17 @@
 		<p><nav class="nav has-shadow">
   <div class="container">
     <div class="nav-left">
-      <a class="nav-item is-tab" href="/documentation/gameloop/">
-        Concept
+      <a class="nav-item is-tab" href="">
+        Types
       </a>
-      <a class="nav-item is-tab" href="/documentation/implementation/">
-        Implementation
-      </a>
-      <a class="nav-item is-tab is-active" href="/documentation/initialize/">
-        Initialize
-      </a>
-      <a class="nav-item is-tab" href="/documentation/update/">
-        Update
-      </a>
-      <a class="nav-item is-tab" href="/documentation/render/">
-        Render
-      </a>
-      <a class="nav-item is-tab" href="/documentation/shutdown/">
-        Shutdown
-      </a>
-      <a class="nav-item is-tab" href="/documentation/example/">
-        Example
+      <a class="nav-item is-tab is-active" href="">
+        Listeners
       </a>
     </div>
   </div>
 </nav>
 <section class="section">
   <div class="container">
-    <div class="content doc-content" id="concept">
-      <div class="content doc-content" id="implementation">
-        <h3 class="title is-2">
-        Initialization
-        </h3>
-        <h4 class="subtitle is-4">of a FRAG application</h4>
-        <hr>
-        <p>
-        After the framework has been initialized, the application is given a chance to do the same.
-        </p>
-        <p>
-        Along with <strong>creating the initial application state</strong>, it is common to <a href="/documentation/loading/"><strong>load any resources</strong></a> that the application might depend on, during this phase of the application lifecycle.
-        </p>
-        <div class="notification is-warning">
-          It is often <strong>uncessary</strong> and <strong>undesirable</strong> to load every resource your application will use, at this point in time. More commonly, applications will load whatever resources are necessary for the presentation of their <strong>home screen | main menu</strong>, and additional resources are loaded when needed.
-        </div>
-        <p>
-        <a href="/documentation/listeners"><strong>Listeners</strong></a> for framework-related <a href="/documentation/event/"><strong>events</strong> should also be registered during this phase of the game loop.
-        </p>
-        <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L30"><div class="notification">Example Game Code</div></a>
-        <figure class="highlight"><pre><code class="nim"></p>
-
-<p>proc resize*(e: EventArgs) =
-    let event = SDLEventMessage(e).event
-    let sdlEventData = event.sdlEventData
-    let graphics = event.graphics
-    graphics.setViewRect(0, 0, 0, uint16 sdlEventData.window.data1, uint16 sdlEventData.window.data2)</p>
-
-<p>proc initApp(app: App, ctx: Frag) =
-    ctx.events.on(SDLEventType.WindowResize, resize)
-        </code></pre></figure>
-      </div>
-    </div>
   </div>
 </section></p>
 

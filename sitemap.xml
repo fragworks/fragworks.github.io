@@ -14,6 +14,14 @@
   </url>
   
   <url>
+    <loc>http://fragworks.io/documentation/asset/</loc>
+  </url>
+  
+  <url>
+    <loc>http://fragworks.io/documentation/event/</loc>
+  </url>
+  
+  <url>
     <loc>http://fragworks.io/roadmap/index/</loc>
     <lastmod>2017-04-13T11:11:53-04:00</lastmod>
   </url>
@@ -28,6 +36,14 @@
   
   <url>
     <loc>http://fragworks.io/documentation/initialize/</loc>
+  </url>
+  
+  <url>
+    <loc>http://fragworks.io/documentation/listeners/</loc>
+  </url>
+  
+  <url>
+    <loc>http://fragworks.io/documentation/loading/</loc>
   </url>
   
   <url>
