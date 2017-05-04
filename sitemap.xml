@@ -27,6 +27,22 @@
   </url>
   
   <url>
+    <loc>http://fragworks.io/documentation/initialize/</loc>
+  </url>
+  
+  <url>
+    <loc>http://fragworks.io/documentation/render/</loc>
+  </url>
+  
+  <url>
+    <loc>http://fragworks.io/documentation/shutdown/</loc>
+  </url>
+  
+  <url>
+    <loc>http://fragworks.io/documentation/update/</loc>
+  </url>
+  
+  <url>
     <loc>http://fragworks.io/categories/</loc>
     <priority>0</priority>
   </url>

@@ -145,13 +145,13 @@
       <a class="nav-item is-tab" href="/documentation/gameloop/">
         Concept
       </a>
-      <a class="nav-item is-tab is-active" href="/documentation/implementation/">
+      <a class="nav-item is-tab" href="/documentation/implementation/">
         Implementation
       </a>
       <a class="nav-item is-tab" href="/documentation/initialize/">
         Initialize
       </a>
-      <a class="nav-item is-tab" href="/documentation/update/">
+      <a class="nav-item is-tab is-active" href="/documentation/update/">
         Update
       </a>
       <a class="nav-item is-tab" href="/documentation/render/">
@@ -168,84 +168,7 @@
 </nav>
 <section class="section">
   <div class="container">
-        <div class="content doc-content" id="implementation">
-          <h3 class="title is-2">
-          The Implementation
-          </h3>
-          <h4 class="subtitle is-4">How FRAG does it</h4>
-          <hr>
-          <p>FRAG&rsquo;s game loop is pretty standard and can be broken down into several sections.</p>
-          <h4 class="title is-2">
-          Initialization
-          </h4>
-          <h5 class="subtitle is-4">Let&rsquo;s get things started&hellip;</h5>
-          <p>The initialization phase of the game loop begins when the <strong>startFrag</strong> procedure is called.</p>
-          <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L136"><div class="notification">Engine Code</div></a>
-            <figure class="highlight"><pre><code class="nim">
-  proc startFrag*<a href="app: T, config: Config">T</a> =
-    var ctx = Frag()
-    ctx.init(config, app)
-    app.initApp(ctx)
-          </code></pre></figure>
-          <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L54"><div class="notification">Example Game Code</div></a>
-          <figure class="highlight"><pre><code class="nim">
-  proc initApp(app: App, ctx: Frag) =
-    # Application initialization logic goes here!
-    discard</p>
-
-<p>startFrag(App(), Config(
-    rootWindowTitle: &ldquo;Frag Example 00-hello-world&rdquo;,
-    rootWindowPosX: window.posUndefined, rootWindowPosY: window.posUndefined,
-    rootWindowWidth: 960, rootWindowHeight: 540,
-    resetFlags: ResetFlag.VSync,
-    logFileName: &ldquo;example-00.log&rdquo;,
-    assetRoot: &ldquo;../assets&rdquo;,
-    debugMode: BGFX_DEBUG_TEXT
-  ))
-          </code></pre></figure>
-          <p>During this phase of the game loop, the framework itself along with all of its subsystems will be initialized. The <strong>initApp</strong> procedure of the app object provided to the <strong>startFrag</strong> procedure, will also be invoked - allowing the FRAG application to execute whatever initialization logic it needs to.</p>
-          <hr>
-          <h4 class="title is-2">
-          Update
-          </h4>
-          <h5 class="subtitle is-4">Your game logic goes here!</h5>
-          <p>Once the framework, subsystems, and application have all finished carrying out their initialization logic, the game loop actually begins.</p>
-          <p>During every iteration of the game loop, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L200"><strong>updateApp</strong></a> procedure will be called. This provides the application with a hook where it can implement whatever update logic it needs to.
-          </p>
-          <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L33"><div class="notification">Example Game Code</div></a>
-          <figure class="highlight"><pre><code class="nim">
-  proc updateApp(app:App, ctx: Frag, deltaTime: float) =
-    # Update application state here!
-    discard
-          </code></pre></figure>
-          <hr>
-          <h4 class="title is-2">
-          Render
-          </h4>
-          <h5 class="subtitle is-4">Ready. Set. Draw.</h5>
-          <p>Along with the updateApp procedure, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L201"><strong>renderApp</strong></a> procedure will be called each frame. Similar to how application state updates should be performed during the updateApp invocation, any drawing that is to be done should be performed during this call.
-          </p>
-          <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L36"><div class="notification">Example Game Code</div></a>
-          <figure class="highlight"><pre><code class="nim">
-  proc renderApp(app: App, ctx: Frag, deltaTime: float) =
-    # Clear Color &amp; Depth Buffers
-    ctx.graphics.clearView(0, ClearMode.Color.ord or ClearMode.Depth.ord, 0x303030ff, 1.0, 0)
-    # Perform application rendering here!
-          </code></pre></figure>
-          <hr>
-          <h4 class="title is-2">
-          Shutdown
-          </h4>
-          <h5 class="subtitle is-4">Don&rsquo;t forget to clean up after yourself!</h5>
-          <p>The final phase of the game loop is the shutdown phase. This phase is entered when the framework calls the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L209"><strong>shutdownApp</strong></a> procedure.</p>
-          <p>For this phase to be entered, the <a href="https://github.com/fragworks/frag/blob/master/src/frag.nim#L147"><strong>conditional check</strong></a> which was enforcing the actual loop of the game loop, must fail. This is generally caused by the end-user of the application closing it, or the application unexpectedly terminating.</p>
-          <p>During the invocation of the shutdownApp procedure, resources which are not automatically released by the framework, or garbage-collected, should be freed.</p>
-          <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L50"><div class="notification">Example Game Code</div></a>
-          <figure class="highlight"><pre><code class="nim">
-  proc shutdownApp(app: App, ctx: Frag) =
-    # Free resources here!
-    discard
-      </code></pre></figure>
+    <div class="content doc-content" id="concept">
     </div>
   </div>
 </section></p>
