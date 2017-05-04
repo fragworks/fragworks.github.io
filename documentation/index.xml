@@ -38,7 +38,7 @@ Engine Code proc startFrag*T = var ctx = Frag() ctx.init(config, app) app.</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fragworks.io/documentation/initialize/</guid>
-      <description>Concept  Implementation  Initialize  Update  Render  Shutdown  Example     Initialization  of a FRAG application   After the framework has been initialized, the application is given a chance to do the same.  Along with creating the initial application state, it is common to load any resources that the application might depend on, during this phase of the application lifecycle. It is often uncessary and undesirable to load every resource your application depends on, at this point in time.</description>
+      <description>Concept  Implementation  Initialize  Update  Render  Shutdown  Example     Initialization  of a FRAG application   After the framework has been initialized, the application is given a chance to do the same.  Along with creating the initial application state, it is common to load any resources that the application might depend on, during this phase of the application lifecycle. It is often uncessary and undesirable to load every resource your application will use, at this point in time.</description>
     </item>
     
     <item>
