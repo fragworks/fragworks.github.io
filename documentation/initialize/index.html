@@ -193,6 +193,11 @@
         <p>
         Along with <strong>creating the initial application state</strong>, it is common to <a href="/documentation/loading/"><strong>load any resources</strong></a> that the application might depend on, during this phase of the application lifecycle.
         </p>
+        <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/03-input/main.nim#L47-L56"><div class="notification">Example Game Code</div></a>
+        <figure class="highlight"><pre><code class="nim">
+proc initApp(app: App, ctx: Frag) =
+  discard ctx.assets.load(&ldquo;textures/texture01.png&rdquo;, AssetType.Texture)
+        </code></pre></figure>
         <div class="notification is-warning">
           It is often <strong>uncessary</strong> and <strong>undesirable</strong> to load every resource your application will use, at this point in time. More commonly, applications will load whatever resources are necessary for the presentation of their <strong>home screen | main menu</strong>, and additional resources are loaded when needed.
         </div>
@@ -200,9 +205,8 @@
         <a href="/documentation/listeners"><strong>Listeners</strong></a> for framework-related <a href="/documentation/event/"><strong>events</strong> should also be registered during this phase of the game loop.
         </p>
         <a href="https://github.com/fragworks/frag/blob/master/examples/desktop/00-hello-world/main.nim#L30"><div class="notification">Example Game Code</div></a>
-        <figure class="highlight"><pre><code class="nim"></p>
-
-<p>proc resize*(e: EventArgs) =
+        <figure class="highlight"><pre><code class="nim">
+  proc resize*(e: EventArgs) =
     let event = SDLEventMessage(e).event
     let sdlEventData = event.sdlEventData
     let graphics = event.graphics
