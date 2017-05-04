@@ -10,20 +10,20 @@
   </url>
   
   <url>
-    <loc>http://fragworks.io/documentation/example/</loc>
-  </url>
-  
-  <url>
     <loc>http://fragworks.io/documentation/gameloop/</loc>
-  </url>
-  
-  <url>
-    <loc>http://fragworks.io/documentation/implementation/</loc>
   </url>
   
   <url>
     <loc>http://fragworks.io/roadmap/index/</loc>
     <lastmod>2017-04-13T11:11:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fragworks.io/documentation/example/</loc>
+  </url>
+  
+  <url>
+    <loc>http://fragworks.io/documentation/implementation/</loc>
   </url>
   
   <url>
