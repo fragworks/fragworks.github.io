@@ -142,13 +142,13 @@
 		<p><nav class="nav has-shadow">
   <div class="container">
     <div class="nav-left">
-      <a class="nav-item is-tab is-active" href="">
+      <a class="nav-item is-tab" href="/documentation/gameloop/">
         Concept
       </a>
       <a class="nav-item is-tab" href="/documentation/implementation/">
         Implementation
       </a>
-      <a class="nav-item is-tab" href="/documentation/example/">
+      <a class="nav-item is-tab  is-active" href="/documentation/example/">
         Example
       </a>
     </div>
@@ -156,22 +156,61 @@
 </nav>
 <section class="section">
   <div class="container">
-        <div class="content doc-content" id="concept">
+        <div class="content doc-content" id="implementation">
           <h3 class="title is-2">
-          The Concept
+          Example
           </h3>
-          <h4 class="subtitle is-4">Initialize. Update. Render. Shutdown.</h4>
+          <h4 class="subtitle is-4">Minimal FRAG application implementing game loop</h4>
           <hr>
-          <p>Almost every game is constructed around a game loop, which serves a number of purposes.</p>
-          <p>Generally, a game loop is initiated and will run continuously until gameplay terminates. During each iteration of the game loop, a number of tasks are carried out. Tasks which are commonly executed during a single loop iteration include:</p>
-          <ul>
-            <li>Processing user input</li>
-            <li>Updating game state</li>
-            <li>Rendering the game</li>
-          </ul>
-          <p>Many games exhibit the pattern of implementing <strong>initialization</strong>, <strong>update</strong>, <strong>render</strong> and <strong>shutdown</strong> procedures, which can form the basis for a game loop.</p>
-          <p>FRAG follows this implementation pattern, and exposes a game loop which the user can easily hook into.</p>
-        </div>
+          <figure class="highlight"><pre><code class="nim">
+#Nim STD Library Imports
+import
+  events
+#Dependency Imports
+import
+  bgfxdotnim,
+  sdl2 as sdl
+#Frag Imports
+import
+  frag,
+  frag/config,
+  frag/graphics/window,
+  frag/logger,
+  frag/modules/graphics</p>
+
+<p>type
+  App = ref object</p>
+
+<p>proc resize*(e: EventArgs) =
+  let event = SDLEventMessage(e).event
+  let sdlEventData = event.sdlEventData
+  let graphics = event.graphics
+  graphics.setViewRect(0, 0, 0, uint16 sdlEventData.window.data1, uint16 sdlEventData.window.data2)</p>
+
+<p>proc initApp(app: App, ctx: Frag) =
+  logDebug &ldquo;Initializing app&hellip;&rdquo;
+  ctx.events.on(SDLEventType.WindowResize, resize)</p>
+
+<p>proc updateApp(app:App, ctx: Frag, deltaTime: float) =
+  discard</p>
+
+<p>proc renderApp(app: App, ctx: Frag, deltaTime: float) =
+  ctx.graphics.clearView(0, ClearMode.Color.ord or ClearMode.Depth.ord, 0x303030ff, 1.0, 0)</p>
+
+<p>proc shutdownApp(app: App, ctx: Frag) =
+  logDebug &ldquo;Shutting down app&hellip;&rdquo;</p>
+
+<p>startFrag(App(), Config(
+  rootWindowTitle: &ldquo;Minimal FRAG Application&rdquo;,
+  rootWindowPosX: window.posUndefined, rootWindowPosY: window.posUndefined,
+  rootWindowWidth: 960, rootWindowHeight: 540,
+  resetFlags: ResetFlag.VSync,
+  logFileName: &ldquo;frag-app.log&rdquo;,
+  assetRoot: &ldquo;../assets&rdquo;,
+  debugMode: BGFX_DEBUG_NONE
+))
+          </code></pre></figure>
+    </div>
   </div>
 </section></p>
 
