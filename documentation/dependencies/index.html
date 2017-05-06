@@ -314,7 +314,8 @@ $ ./koch boot -d:release</code></pre></figure>
                         <pre><code class="language-bash" data-lang="bash">iex (new-object net.webclient).downloadstring(&lsquo;<a href="https://get.scoop.sh'">https://get.scoop.sh'</a>)
 scoop install gcc; scoop install make; scoop install coreutils; scoop install iconv</code></pre></figure>
                     <div class="notification is-warning">
-                        If you get an error you might need to change the execution policy (i.e. enable Powershell) with Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+                        If you receive an error you might need to update the execution policy (i.e. enable PowerShell) with the foollowing command: <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">Set-ExecutionPolicy RemoteSigned -scope CurrentUser</code></pre></figure>
                     </div>
                     Next you should add an <strong>environment variable</strong> to your system named <strong>MINGW</strong>, which points to your gcc installation. Assuming you used Scoop to install gcc, issue the following command to determine where
                     gcc was installed on your system:
