@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
     $('.menu-list li a').removeClass('is-active');
     $(this).addClass('is-active');
   });
-/*
+
   $('.modal-button').click(function() {
     var target = $(this).data('target');
     $('html').addClass('is-clipped');
@@ -38,7 +38,7 @@ jQuery(document).ready(function ($) {
       $('.modal').removeClass('is-active');
     }
   });
-*/
+
   var $highlights = $('.highlight');
 
   $highlights.each(function() {

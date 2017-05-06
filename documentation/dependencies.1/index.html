@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Dependencies</title>
+	
+	
+	<link rel="stylesheet" href="http://fragworks.io/css/style.css">
+	<link rel="stylesheet" href="http://fragworks.io/fonts/docker-icon/fontcustom/fontcustom.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="http://fragworks.io/js/fw.js"></script>
+	
+	<meta name="generator" content="Hugo 0.20" />
+</head>
+<body>
+	<div class="container">
+		<nav class="nav">
+			<div class="nav-left">
+				<a class="nav-item is-brand" href="http://fragworks.io/">
+					<img src="http://fragworks.io/images/logo.svg" width="32" alt="FRAG: Framework for Rather Awesome Games">
+					FRAG
+				</a>
+			</div>
+			<div class="nav-center">
+				<a class="nav-item" href="https://github.com/fragworks/frag">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				<a class="nav-item" href="https://twitter.com/hahaitsfunny">
+				<span class="icon">
+					<i class="fa fa-twitter"></i>
+				</span>
+				</a>
+			</div>
+			<span id="nav-toggle" class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+			<div id="nav-menu" class="nav-right nav-menu">
+				<a class="nav-item" href="http://fragworks.io/">
+					Home
+				</a>
+				
+				
+				
+				
+					<a class="nav-item" href="/community/index/">
+						Community
+					</a>
+				
+				
+				
+					<a class="nav-item is-active" href="/documentation/index/">
+						Documentation
+					</a>
+				
+				
+				
+					<a class="nav-item" href="/roadmap/index/">
+						Roadmap
+					</a>
+				
+				
+				<div class="nav-item">
+					<div class="field is-grouped">
+						<p class="control">
+							<a id="twitter" class="button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://fragworks.io" target="_blank" href="https://twitter.com/intent/tweet?text=FRAG: a game development framework built with @nim_lang %23FRAG&amp;url=http://fragworks.io&amp;via=hahaitsfunny">
+								<span class="icon">
+								<i class="fa fa-twitter"></i>
+								</span>
+								<span>Tweet</span>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	
+	<main>
+		<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            Documentation
+          </p>
+          <p class="subtitle">
+            Everything you need to <strong>create a game</strong> with FRAG
+          </p>
+        </div>
+        <div class="column">
+          <div class="notification is-warning">
+            <p>
+              Documentation is still very much a work in progress. Please understand there may be rapid changes to this section of the website.
+            </p>
+          </div>
+          Documentation Progress:
+          <progress class="progress is-info" value="5" max="100">5%</progress>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          
+            
+              <li class="is-active"><a class="nav-item is-active" href="/documentation/install/">
+                Install
+              </a></li>
+            
+          
+            
+              <li><a class="nav-item" href="/documentation/config/">
+                Configure
+              </a></li>
+            
+          
+            
+              <li><a class="nav-item" href="/documentation/gameloop/">
+                Game Loop
+              </a></li>
+            
+          
+            
+              <li><a class="nav-item" href="/documentation/asset/">
+                Asset
+              </a></li>
+            
+          
+            
+              <li><a class="nav-item" href="/documentation/event/">
+                Event
+              </a></li>
+            
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+		<p><nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item is-tab" href="/documentation/install">
+        Start
+      </a>
+      <a class="nav-item is-tab is-active" href="">
+        Dependencies
+      </a>
+      <a class="nav-item is-tab" href="">
+        Customize
+      </a>
+    </div>
+  </div>
+</nav>
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <div class="media card-header-title">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <a href="https://nim-lang.org/">
+                <img src="../../../images/nim_logo.svg" alt="Nim">
+              </a>
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">Nim</p>
+            <p class="subtitle is-6">devel version</p>
+          </div>
+          <span class="notification is-info">
+          FRAG recommends <a href="http://scoop.sh/">Scoop</a> for managing packages on Windows!
+          </span>
+        </div>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>
+          Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.
+          </p>
+          <ul>
+            <li>High-performance garbage-collected language</li>
+            <li>Compiles to C, C++ or JavaScript</li>
+            <li>Produces dependency-free binaries</li>
+            <li>Runs on Windows, macOS, Linux, and more</li>
+        </div>
+      </div>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">Windows, OSX, Linux</strong>
+      </footer>
+      <footer class="card-footer"><br />
+        <a href="https://github.com/nim-lang/Nim#compiling" class="card-footer-item">Nim Compilation Instructions</a>
+      </footer>
+      <footer class="card-footer">
+        <div class="notification card-footer-item">
+          <div class="content">
+            <h1 class="title">Compiling</h1>
+The Nim compiler currently officially supports the following platform and architecture combinations:
+<ul>
+  <li>Windows (Windows XP or greater) - x86 and x86_64</li>
+  <li>Linux (most, if not all, distributions) - x86, x86_64, ppc64 and armv6l</li>
+  <li>Mac OS X (10.04 or greater) - x86, x86_64 and ppc64</li>
+</ul>
+More platforms are supported, however they are not tested regularly and they may not be as stable as the above-listed platforms.</p>
+
+<p>Compiling the Nim compiler is quite straightforward if you follow these steps:</p>
+
+<p>First, the C source of an older version of the Nim compiler is needed to bootstrap the latest version because the Nim compiler itself is written in the Nim programming language. Those C sources are available within the <a href="https://github.com/nim-lang/csources"><strong>nim-lang/csources</strong></a> repository.</p>
+
+<p>Next, to build from source you will need:</p>
+
+<ul>
+<li>A C compiler such as <strong>gcc</strong> 3.x/later or an alternative such as clang, Visual C++ or Intel C++. It is recommended to use gcc 3.x or later.</li>
+<li>Either <strong>git</strong> or wget to download the needed source repositories.</li>
+<li>The <strong>build-essential</strong> package when using gcc on Ubuntu (and likely other distros as well).</li>
+</ul>
+
+<p>Then, if you are on a *nix system or Windows, the following steps should compile Nim from source using gcc, git and the koch build tool (in the place of sh build.sh you should substitute build.bat on x86 Windows or build64.bat on x86_64 Windows):
+          </div>
+        </div>
+      </footer>
+      <footer>
+        <figure class="highlight card-footer-item">
+          <pre><code class="language-bash" data-lang="bash">
+  $ git clone <a href="https://github.com/nim-lang/Nim.git">https://github.com/nim-lang/Nim.git</a>
+  $ cd Nim
+  $ git clone &ndash;depth 1 <a href="https://github.com/nim-lang/csources.git">https://github.com/nim-lang/csources.git</a>
+  $ cd csources
+  $ sh build.sh
+  $ cd ../
+  $ bin/nim c koch
+  $ ./koch boot -d:release
+          </code></pre></figure>
+      </footer>
+      <footer class="card-footer">
+        <div class="notification card-footer-item">
+          <div class="content">
+Finally, once you have finished the build steps (on Windows, Mac or Linux) you should add the bin directory to your <strong>PATH</strong>.</p>
+
+<h1 class="title">Nimble</h1>
+
+<p>Nimble is Nim&rsquo;s package manager and it can be acquired from the <a href="https://github.com/nim-lang/nimble"><strong>nim-lang/nimble</strong></a> repository. Assuming that you added Nim&rsquo;s bin directory to your PATH, you may install Nimble from source by running:
+          </div>
+        </div>
+      </footer>
+      <footer class="card-footer">
+        <figure class="highlight card-footer-item"><pre><code class="language-bash" data-lang="bash">$ ./koch nimble</code></pre></figure>
+      </footer>
+      <footer class="card-footer">
+        <div class="notification card-footer-item">
+          <div class="content">
+            <p>within the root of the cloned repository.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <hr>
+    <div class="card">
+      <header class="card-header">
+        <div class="media card-header-title">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <a href="https://github.com/bkaradzic/bgfx">
+                <span class="icon is-large">
+                  <i class="fa fa-picture-o"></i>
+                </span>
+              </a>
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">BGFX</p>
+            <p class="subtitle is-6">version 1.0</p>
+          </div>
+        </div>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>
+          Cross-platform, graphics API agnostic, “Bring Your Own Engine/Framework” style rendering library, licensed under permissive BSD-2 clause open source license.
+          </p>
+        </div>
+      </div>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">Windows</strong>
+      </footer>
+      <footer class="card-footer">
+        <div class="notification card-footer-item">
+          <div class="content">
+            <h1 class="title">Compiling with MinGW</h1>
+Begin by installing <strong>gcc</strong>, <strong>coreutils</strong>, and <strong>libiconv</strong> on your system. We recommend <a href="http://scoop.sh/"><strong>Scoop</strong></a> for an easily installation process. Installing scoop, along with the dependencies listed above is easy:
+            <br>
+            <span class="tag is-info">
+              In PowerShell
+            </span>
+          </div>
+        </div>
+      </footer>
+      <footer>
+        <figure class="highlight card-footer-item">
+          <pre><code class="language-bash" data-lang="bash">
+iex (new-object net.webclient).downloadstring(&lsquo;<a href="https://get.scoop.sh'">https://get.scoop.sh'</a>)
+scoop install gcc; scoop install make; scoop install coreutils; scoop install iconv
+          </code></pre></figure>
+      </footer>
+      <footer class="card-footer">
+        <div class="notification card-footer-item">
+          <div class="content">
+            <div class="notification is-warning">
+              If you get an error you might need to change the execution policy (i.e. enable Powershell) with Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+            </div>
+Next you should add an <strong>environment variable</strong> to your system named <strong>MINGW</strong>, which points to your gcc installation. Assuming you used Scoop to install gcc, issue the following command to determine where gcc was installed on your system:
+            <br>
+          </div>
+        </div>
+      </footer>
+      <footer>
+        <figure class="highlight card-footer-item">
+          <pre><code class="language-bash" data-lang="bash">
+scoop which gcc
+          </code></pre></figure>
+      </footer>
+      <footer class="card-footer">
+        <div class="notification card-footer-item">
+          <div class="content">
+You should see a response pointing to the gcc executable. For example:
+          </div>
+        </div>
+      </footer>
+      <footer>
+        <figure class="highlight card-footer-item">
+          <pre><code class="language-bash" data-lang="bash">
+C:\Users\FragUser\scoop\apps\gcc\current\bin\gcc.exe
+          </code></pre></figure>
+      </footer>
+      <footer class="card-footer">
+        <div class="notification card-footer-item">
+          <div class="content">
+Given the above example, you would set the environment variable value to: <strong>C:\Users\FragUser\scoop\apps\gcc\current</strong>
+          </div>
+        </div>
+      </footer>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">OSX</strong>
+      </footer>
+      <footer class="card-footer"><br />
+        <a href="https://www.libsdl.org/release/SDL2-2.0.5.dmg" class="card-footer-item">Intel 10.5+ Download</a>
+      </footer>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">Linux</strong>
+      </footer>
+      <footer class="card-footer"><br />
+        <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
+      </footer>
+    </div>
+    <hr>
+    <div class="card">
+      <header class="card-header">
+        <div class="media card-header-title">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <a href="https://www.libsdl.org/index.php">
+                <img src="../../../images/SDL_logo.png" alt="SDL">
+              </a>
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">SDL</p>
+            <p class="subtitle is-6">version 2.0.5 (stable)</p>
+          </div>
+        </div>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>
+          Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including Valve&rsquo;s award winning catalog and many Humble Bundle games.
+          </p>
+          <p>SDL officially supports Windows, Mac OS X, Linux, iOS, and Android. Support for other platforms may be found in the source code.</p>
+          <p>SDL is written in C, works natively with C++, and there are bindings available for several other languages, including C# and Python.</p>
+          <p>SDL 2.0 is distributed under the zlib license. This license allows you to use SDL freely in any software.</p>
+        </div>
+      </div>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">Windows</strong>
+      </footer>
+      <footer class="card-footer"><br />
+        <a href="https://www.libsdl.org/release/SDL2-2.0.5-win32-x86.zip" class="card-footer-item">32-bit Windows Download</a>
+        <a href="https://www.libsdl.org/release/SDL2-2.0.5-win32-x64.zip" class="card-footer-item">64-bit Windows Download</a>
+      </footer>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">OSX</strong>
+      </footer>
+      <footer class="card-footer"><br />
+        <a href="https://www.libsdl.org/release/SDL2-2.0.5.dmg" class="card-footer-item">Intel 10.5+ Download</a>
+      </footer>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">Linux</strong>
+      </footer>
+      <footer class="card-footer"><br />
+        <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
+      </footer>
+    </div>
+    <hr>
+    <div class="card">
+      <header class="card-header">
+        <div class="media card-header-title">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <a href="https://openal.org/">
+                <img src="../../../images/OpenAL_Logo.svg" alt="OpenAL">
+              </a>
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">OpenAL</p>
+            <p class="subtitle is-6">version 1.1</p>
+          </div>
+        </div>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>
+          OpenAL is a cross-platform 3D audio API appropriate for use with gaming applications and many other types of audio applications.
+          </p>
+        </div>
+      </div>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">Windows</strong>
+      </footer>
+      <footer class="card-footer"><br />
+        <a href="https://openal.org/downloads/oalinst.zip" class="card-footer-item">Download</a>
+      </footer>
+      <footer class="card-footer"><br />
+        <strong class="card-footer-item">Linux</strong>
+      </footer>
+      <footer class="card-footer"><br />
+        <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
+      </footer>
+    </div>
+    <hr>
+    <div class="card">
+        <header class="card-header">
+          <div class="media card-header-title">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <a href="https://www.docker.com/">
+                  <img src="../../../images/docker.svg" alt="Docker">
+                </a>
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Docker</p>
+              <p class="subtitle is-6">Community Edition</p>
+            </div>
+            <span class="notification is-info">
+              Docker is used to compile games built with FRAG
+              for targets other than the host OS | CPU
+            </span>
+          </div>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p>
+            Docker is the world’s leading software container platform. Developers use Docker to eliminate “works on my machine” problems when collaborating on code with co-workers. Operators use Docker to run and manage apps side-by-side in isolated containers to get better compute density. Enterprises use Docker to build agile software delivery pipelines to ship new features faster, more securely and with confidence for both Linux and Windows Server apps.
+            </p>
+          </div>
+        </div>
+        <footer class="card-footer"><br />
+          <strong class="card-footer-item">Windows</strong>
+        </footer>
+        <footer class="card-footer"><br />
+          <a href="https://download.docker.com/win/stable/InstallDocker.msi" class="card-footer-item">Download</a>
+        </footer>
+        <footer class="card-footer"><br />
+          <strong class="card-footer-item">OSX</strong>
+        </footer>
+        <footer class="card-footer">
+          <a href="https://download.docker.com/mac/stable/Docker.dmg" class="card-footer-item">Download</a>
+        </footer>
+        <footer class="card-footer">
+          <strong class="card-footer-item">Linux</strong>
+        </footer>
+        <footer class="card-footer"><br />
+          <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
+        </footer>
+      </div>
+    </div>
+  </div>
+</section></p>
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="columns">
+			<div class="column is-3">
+				<div id="about" class="content">
+				<strong xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">FRAG</strong> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://fragworks.io" property="cc:attributionName" rel="cc:attributionURL">Zachary Carter & Individual Contributors</a>.
+				<div class="twitter-container">
+					<iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 262px; height: 28px;" title="Twitter Follow Button" src="http://platform.twitter.com/widgets/follow_button.5c39137502ea1894df4434ae5ed041c5.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=hahaitsfunny&amp;show_count=true&amp;show_screen_name=true&amp;size=l&amp;time=1493497446003" data-screen-name="hahaitsfunny" frameborder="0"></iframe>
+				</div>
+				</div>
+			</div>
+			<div class="column is-5">
+				<div id="share" class="content">
+				<div>
+					<strong>Support</strong> FRAG!
+				</div>
+				<div id="social">
+					<iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=fragworks&amp;repo=frag&amp;type=star&amp;count=true&amp;size=large" allowtransparency="true" scrolling="0" frameborder="0" height="30px" width="160px"></iframe>
+
+					<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="FRAG: a game development framework built with @nim_lang" data-url="http://fragworks.io" data-via="hahaitsfunny" data-hashtags="FRAG" data-related="nim-lang" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+				</div>
+			</div>
+			<div class="column is-4">
+				<div id="sister">
+				<p>
+					Brought to you by these <strong>amazing</strong> technologies:
+				</p>
+				<ul>
+					<li>
+						<div class="columns">
+							<div class="column">
+								<a href="https://github.com/bkaradzic/bgfx">
+									<strong>BGFX</strong>
+								</a>
+							</div>
+							<div class="column">
+								<iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=bkaradzic&amp;repo=bgfx&amp;type=star&amp;count=true&amp;size=large" allowtransparency="true" scrolling="0" frameborder="0" height="30px" width="160px"></iframe>
+							</div>
+						</div>
+					</li>
+				</ul>
+				</div>
+			</div>
+			</div>
+
+			<p id="tsp">
+			<small>
+				Source code licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+				<br>
+				Website content licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+			</small>
+			</p>
+		</div>
+		</footer>
+	<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

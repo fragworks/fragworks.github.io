@@ -152,87 +152,86 @@
   </div>
 </section>
 		<p><nav class="nav has-shadow">
-  <div class="container">
-    <div class="nav-left">
-      <a class="nav-item is-tab" href="/documentation/install">
+    <div class="container">
+        <div class="nav-left">
+            <a class="nav-item is-tab" href="/documentation/install">
         Start
       </a>
-      <a class="nav-item is-tab is-active" href="">
+            <a class="nav-item is-tab is-active" href="">
         Dependencies
       </a>
-      <a class="nav-item is-tab" href="">
+            <a class="nav-item is-tab" href="">
         Customize
       </a>
+        </div>
     </div>
-  </div>
 </nav>
 <section class="section">
-  <div class="container">
-    <div class="card">
-      <header class="card-header">
-        <div class="media card-header-title">
-          <div class="media-left">
-            <figure class="image is-64x64">
-              <a href="https://nim-lang.org/">
-                <img src="../../../images/nim_logo.svg" alt="Nim">
-              </a>
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">Nim</p>
-            <p class="subtitle is-6">devel version</p>
-          </div>
+    <div class="container">
+        <div class="card">
+            <header class="card-header">
+                <div class="media card-header-title">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <a href="https://nim-lang.org/">
+                                <img src="../../../images/nim_logo.svg" alt="Nim">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Nim</p>
+                        <p class="subtitle is-6">devel version</p>
+                    </div>
+                </div>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <p>
+                        Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.
+                    </p>
+                    <ul>
+                        <li>High-performance garbage-collected language</li>
+                        <li>Compiles to C, C++ or JavaScript</li>
+                        <li>Produces dependency-free binaries</li>
+                        <li>Runs on Windows, macOS, Linux, and more</li>
+                </div>
+            </div>
+            <footer class="card-footer">
+                <strong class="card-footer-item">Windows, OSX, Linux</strong>
+            </footer>
+            <footer class="card-footer">
+                <a class="card-footer-item modal-button" data-target="#nim-compile">Nim Compilation Instructions</a>
+            </footer>
         </div>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <p>
-          Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.
-          </p>
-          <ul>
-            <li>High-performance garbage-collected language</li>
-            <li>Compiles to C, C++ or JavaScript</li>
-            <li>Produces dependency-free binaries</li>
-            <li>Runs on Windows, macOS, Linux, and more</li>
-        </div>
-      </div>
-      <footer class="card-footer"><br />
-        <strong class="card-footer-item">Windows, OSX, Linux</strong>
-      </footer>
-      <footer class="card-footer"><br />
-        <a href="https://github.com/nim-lang/Nim#compiling" class="card-footer-item">Nim Compilation Instructions</a>
-      </footer>
-      <footer class="card-footer">
-        <div class="notification card-footer-item">
-          <div class="content">
-            <h1 class="title">Compiling</h1>
-The Nim compiler currently officially supports the following platform and architecture combinations:
-<ul>
-  <li>Windows (Windows XP or greater) - x86 and x86_64</li>
-  <li>Linux (most, if not all, distributions) - x86, x86_64, ppc64 and armv6l</li>
-  <li>Mac OS X (10.04 or greater) - x86, x86_64 and ppc64</li>
-</ul>
-More platforms are supported, however they are not tested regularly and they may not be as stable as the above-listed platforms.</p>
-
-<p>Compiling the Nim compiler is quite straightforward if you follow these steps:</p>
-
-<p>First, the C source of an older version of the Nim compiler is needed to bootstrap the latest version because the Nim compiler itself is written in the Nim programming language. Those C sources are available within the <a href="https://github.com/nim-lang/csources"><strong>nim-lang/csources</strong></a> repository.</p>
-
-<p>Next, to build from source you will need:</p>
-
-<ul>
-<li>A C compiler such as <strong>gcc</strong> 3.x/later or an alternative such as clang, Visual C++ or Intel C++. It is recommended to use gcc 3.x or later.</li>
-<li>Either <strong>git</strong> or wget to download the needed source repositories.</li>
-<li>The <string>build-essential</strong> package when using gcc on Ubuntu (and likely other distros as well).</li>
-</ul>
-
-<p>Then, if you are on a *nix system or Windows, the following steps should compile Nim from source using gcc, git and the koch build tool (in the place of sh build.sh you should substitute build.bat on x86 Windows or build64.bat on x86_64 Windows):
-          </div>
-        </div>
-      </footer>
-      <footer>
-        <figure class="highlight card-footer-item">
-          <pre><code class="language-bash" data-lang="bash">
+        <div class="modal" id="nim-compile">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <a href="https://github.com/nim-lang/Nim#compiling" class="modal-card-title">Nim Compilation Instructions</a>
+                    <button class="delete"></button>
+                </header>
+                <section class="modal-card-body">
+                <figure class="highlight card-footer-item">
+                    <span class="tag is-info">Easily install gcc on Windows with <a href="http://scoop.sh/">Scoop</a>!</span>
+                    <pre><code class="language-bash" data-lang="bash">scoop install gcc</code></pre></figure>
+                    <div class="content">
+                        <h1 class="title">Compiling</h1>
+                        The Nim compiler currently officially supports the following platform and architecture combinations:
+                        <ul>
+                            <li>Windows (Windows XP or greater) - x86 and x86_64</li>
+                            <li>Linux (most, if not all, distributions) - x86, x86_64, ppc64 and armv6l</li>
+                            <li>Mac OS X (10.04 or greater) - x86, x86_64 and ppc64</li>
+                        </ul>
+                        More platforms are supported, however they are not tested regularly and they may not be as stable as the above-listed platforms. Compiling the Nim compiler is quite straightforward if you follow these steps: First, the C source of an older version of
+                        the Nim compiler is needed to bootstrap the latest version because the Nim compiler itself is written in the Nim programming language. Those C sources are available within the <a href="https://github.com/nim-lang/csources"><strong>nim-lang/csources</strong></a>                        repository. Next, to build from source you will need:
+                        <ul>
+                            <li>A C compiler such as <strong>gcc</strong> 3.x/later or an alternative such as clang, Visual C++ or Intel C++. It is recommended to use gcc 3.x or later.</li>
+                            <li>Either <strong>git</strong> or wget to download the needed source repositories.</li>
+                            <li>The <strong>build-essential</strong> package when using gcc on Ubuntu (and likely other distros as well).</li>
+                        </ul>
+                        Then, if you are on a *nix system or Windows, the following steps should compile Nim from source using gcc, git and the koch build tool (in the place of sh build.sh you should substitute build.bat on x86 Windows or build64.bat on x86_64 Windows):
+                        <figure class="highlight card-footer-item">
+                            <pre><code class="language-bash" data-lang="bash">
   $ git clone <a href="https://github.com/nim-lang/Nim.git">https://github.com/nim-lang/Nim.git</a>
   $ cd Nim
   $ git clone &ndash;depth 1 <a href="https://github.com/nim-lang/csources.git">https://github.com/nim-lang/csources.git</a>
@@ -242,162 +241,236 @@ More platforms are supported, however they are not tested regularly and they may
   $ bin/nim c koch
   $ ./koch boot -d:release
           </code></pre></figure>
-      </footer>
-      <footer class="card-footer">
-        <div class="notification card-footer-item">
-          <div class="content">
-Finally, once you have finished the build steps (on Windows, Mac or Linux) you should add the bin directory to your <strong>PATH</strong>.</p>
-
-<h1 class="title">Nimble</h1>
-
-<p>Nimble is Nim&rsquo;s package manager and it can be acquired from the <a href="https://github.com/nim-lang/nimble"><strong>nim-lang/nimble</strong></a> repository. Assuming that you added Nim&rsquo;s bin directory to your PATH, you may install Nimble from source by running:
-          </div>
-        </div>
-      </footer>
-      <footer class="card-footer">
-        <figure class="highlight card-footer-item"><pre><code class="language-bash" data-lang="bash">$ ./koch nimble</code></pre></figure>
-      </footer>
-      <footer class="card-footer">
-        <div class="notification card-footer-item">
-          <div class="content">
-            <p>within the root of the cloned repository.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <hr>
-    <div class="card">
-      <header class="card-header">
-        <div class="media card-header-title">
-          <div class="media-left">
-            <figure class="image is-64x64">
-              <a href="https://www.libsdl.org/index.php">
-                <img src="../../../images/SDL_logo.png" alt="SDL">
-              </a>
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">SDL</p>
-            <p class="subtitle is-6">version 2.0.5 (stable)</p>
-          </div>
-        </div>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <p>
-          Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including Valve&rsquo;s award winning catalog and many Humble Bundle games.
-          </p>
-          <p>SDL officially supports Windows, Mac OS X, Linux, iOS, and Android. Support for other platforms may be found in the source code.</p>
-          <p>SDL is written in C, works natively with C++, and there are bindings available for several other languages, including C# and Python.</p>
-          <p>SDL 2.0 is distributed under the zlib license. This license allows you to use SDL freely in any software.</p>
-        </div>
-      </div>
-      <footer class="card-footer"><br />
-        <strong class="card-footer-item">Windows</strong>
-      </footer>
-      <footer class="card-footer"><br />
-        <a href="https://www.libsdl.org/release/SDL2-2.0.5-win32-x86.zip" class="card-footer-item">32-bit Windows Download</a>
-        <a href="https://www.libsdl.org/release/SDL2-2.0.5-win32-x64.zip" class="card-footer-item">64-bit Windows Download</a>
-      </footer>
-      <footer class="card-footer"><br />
-        <strong class="card-footer-item">OSX</strong>
-      </footer>
-      <footer class="card-footer"><br />
-        <a href="https://www.libsdl.org/release/SDL2-2.0.5.dmg" class="card-footer-item">Intel 10.5+ Download</a>
-      </footer>
-      <footer class="card-footer"><br />
-        <strong class="card-footer-item">Linux</strong>
-      </footer>
-      <footer class="card-footer"><br />
-        <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
-      </footer>
-    </div>
-    <hr>
-    <div class="card">
-      <header class="card-header">
-        <div class="media card-header-title">
-          <div class="media-left">
-            <figure class="image is-64x64">
-              <a href="https://openal.org/">
-                <img src="../../../images/OpenAL_Logo.svg" alt="OpenAL">
-              </a>
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">OpenAL</p>
-            <p class="subtitle is-6">version 1.1</p>
-          </div>
-        </div>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <p>
-          OpenAL is a cross-platform 3D audio API appropriate for use with gaming applications and many other types of audio applications.
-          </p>
-        </div>
-      </div>
-      <footer class="card-footer"><br />
-        <strong class="card-footer-item">Windows</strong>
-      </footer>
-      <footer class="card-footer"><br />
-        <a href="https://openal.org/downloads/oalinst.zip" class="card-footer-item">Download</a>
-      </footer>
-      <footer class="card-footer"><br />
-        <strong class="card-footer-item">Linux</strong>
-      </footer>
-      <footer class="card-footer"><br />
-        <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
-      </footer>
-    </div>
-    <hr>
-    <div class="card">
-        <header class="card-header">
-          <div class="media card-header-title">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <a href="https://www.docker.com/">
-                  <img src="../../../images/docker.svg" alt="Docker">
-                </a>
-              </figure>
+                        Finally, once you have finished the build steps (on Windows, Mac or Linux) you should add the bin directory to your <strong>PATH</strong>.
+                        <h1 class="title">Nimble</h1>
+                        Nimble is Nim&rsquo;s package manager and it can be acquired from the <a href="https://github.com/nim-lang/nimble"><strong>nim-lang/nimble</strong></a> repository. Assuming that you added Nim&rsquo;s bin directory to your PATH, you may install
+                        Nimble from source by running:
+                        <figure class="highlight card-footer-item"><pre><code class="language-bash" data-lang="bash">$ ./koch nimble</code></pre></figure>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                </footer>
             </div>
-            <div class="media-content">
-              <p class="title is-4">Docker</p>
-              <p class="subtitle is-6">Community Edition</p>
+        </div>
+        <hr>
+        <div class="card">
+            <header class="card-header">
+                <div class="media card-header-title">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <a href="https://github.com/bkaradzic/bgfx">
+                                <span class="icon is-large">
+                  <i class="fa fa-picture-o"></i>
+                </span>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">BGFX</p>
+                        <p class="subtitle is-6">version 1.0</p>
+                    </div>
+                </div>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <p>
+                        Cross-platform, graphics API agnostic, “Bring Your Own Engine/Framework” style rendering library, licensed under permissive BSD-2 clause open source license.
+                    </p>
+                </div>
             </div>
-            <span class="notification is-info">
+            <footer class="card-footer">
+                <strong class="card-footer-item">Windows</strong>
+            </footer>
+            <footer class="card-footer">
+                <a class="card-footer-item modal-button" data-target="#bgfx-win-compile">BGFX Compilation Instructions</a>
+            </footer>
+            <footer class="card-footer">
+                <strong class="card-footer-item">OSX</strong>
+            </footer>
+            <footer class="card-footer">
+            </footer>
+            <footer class="card-footer">
+                <strong class="card-footer-item">Linux</strong>
+            </footer>
+            <footer class="card-footer">
+            </footer>
+        </div>
+        <div class="modal" id="bgfx-win-compile">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">BGFX Compilation Instructions - Windows</p>
+                    <button class="delete"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="content">
+                        <h1 class="title">Compiling with MinGW</h1>
+                        Begin by installing <strong>gcc</strong>, <strong>coreutils</strong>, and <strong>libiconv</strong> on your system. We recommend <a href="http://scoop.sh/"><strong>Scoop</strong></a> for an easily installation process. Installing
+                        scoop, along with the dependencies listed above is easy:
+                        <br>
+                        <span class="tag is-info">
+              In PowerShell
+            </span>
+                    </div>
+                    <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">
+iex (new-object net.webclient).downloadstring(&lsquo;<a href="https://get.scoop.sh'">https://get.scoop.sh'</a>)
+scoop install gcc; scoop install make; scoop install coreutils; scoop install iconv
+          </code></pre></figure>
+                    <div class="notification is-warning">
+                        If you get an error you might need to change the execution policy (i.e. enable Powershell) with Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+                    </div>
+                    Next you should add an <strong>environment variable</strong> to your system named <strong>MINGW</strong>, which points to your gcc installation. Assuming you used Scoop to install gcc, issue the following command to determine where
+                    gcc was installed on your system:
+                    <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">
+scoop which gcc
+          </code></pre></figure>
+                    You should see a response pointing to the gcc executable. For example:
+                    <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">
+C:\Users\FragUser\scoop\apps\gcc\current\bin\gcc.exe
+          </code></pre></figure>
+                    Given the above example, you would set the environment variable value to: <strong>C:\Users\FragUser\scoop\apps\gcc\current</strong>
+                </section>
+                <footer class="modal-card-foot">
+                </footer>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <header class="card-header">
+                <div class="media card-header-title">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <a href="https://www.libsdl.org/index.php">
+                                <img src="../../../images/SDL_logo.png" alt="SDL">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">SDL</p>
+                        <p class="subtitle is-6">version 2.0.5 (stable)</p>
+                    </div>
+                </div>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <p>
+                        Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games
+                        including Valve&rsquo;s award winning catalog and many Humble Bundle games.
+                    </p>
+                    <p>SDL officially supports Windows, Mac OS X, Linux, iOS, and Android. Support for other platforms may be found in the source code.</p>
+                    <p>SDL is written in C, works natively with C++, and there are bindings available for several other languages, including C# and Python.</p>
+                    <p>SDL 2.0 is distributed under the zlib license. This license allows you to use SDL freely in any software.</p>
+                </div>
+            </div>
+            <footer class="card-footer">
+                <strong class="card-footer-item">Windows</strong>
+            </footer>
+            <footer class="card-footer">
+                <a href="https://www.libsdl.org/release/SDL2-2.0.5-win32-x86.zip" class="card-footer-item">32-bit Windows Download</a>
+                <a href="https://www.libsdl.org/release/SDL2-2.0.5-win32-x64.zip" class="card-footer-item">64-bit Windows Download</a>
+            </footer>
+            <footer class="card-footer">
+                <strong class="card-footer-item">OSX</strong>
+            </footer>
+            <footer class="card-footer">
+                <a href="https://www.libsdl.org/release/SDL2-2.0.5.dmg" class="card-footer-item">Intel 10.5+ Download</a>
+            </footer>
+            <footer class="card-footer">
+                <strong class="card-footer-item">Linux</strong>
+            </footer>
+            <footer class="card-footer">
+                <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
+            </footer>
+        </div>
+        <hr>
+        <div class="card">
+            <header class="card-header">
+                <div class="media card-header-title">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <a href="https://openal.org/">
+                                <img src="../../../images/OpenAL_Logo.svg" alt="OpenAL">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">OpenAL</p>
+                        <p class="subtitle is-6">version 1.1</p>
+                    </div>
+                </div>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <p>
+                        OpenAL is a cross-platform 3D audio API appropriate for use with gaming applications and many other types of audio applications.
+                    </p>
+                </div>
+            </div>
+            <footer class="card-footer">
+                <strong class="card-footer-item">Windows</strong>
+            </footer>
+            <footer class="card-footer">
+                <a href="https://openal.org/downloads/oalinst.zip" class="card-footer-item">Download</a>
+            </footer>
+            <footer class="card-footer">
+                <strong class="card-footer-item">Linux</strong>
+            </footer>
+            <footer class="card-footer">
+                <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
+            </footer>
+        </div>
+        <hr>
+        <div class="card">
+            <header class="card-header">
+                <div class="media card-header-title">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <a href="https://www.docker.com/">
+                                <img src="../../../images/docker.svg" alt="Docker">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Docker</p>
+                        <p class="subtitle is-6">Community Edition</p>
+                    </div>
+                    <span class="notification is-info">
               Docker is used to compile games built with FRAG
               for targets other than the host OS | CPU
             </span>
-          </div>
-        </header>
-        <div class="card-content">
-          <div class="content">
-            <p>
-            Docker is the world’s leading software container platform. Developers use Docker to eliminate “works on my machine” problems when collaborating on code with co-workers. Operators use Docker to run and manage apps side-by-side in isolated containers to get better compute density. Enterprises use Docker to build agile software delivery pipelines to ship new features faster, more securely and with confidence for both Linux and Windows Server apps.
-            </p>
-          </div>
+                </div>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <p>
+                        Docker is the world’s leading software container platform. Developers use Docker to eliminate “works on my machine” problems when collaborating on code with co-workers. Operators use Docker to run and manage apps side-by-side in isolated containers to
+                        get better compute density. Enterprises use Docker to build agile software delivery pipelines to ship new features faster, more securely and with confidence for both Linux and Windows Server apps.
+                    </p>
+                </div>
+            </div>
+            <footer class="card-footer">
+                <strong class="card-footer-item">Windows</strong>
+            </footer>
+            <footer class="card-footer">
+                <a href="https://download.docker.com/win/stable/InstallDocker.msi" class="card-footer-item">Download</a>
+            </footer>
+            <footer class="card-footer">
+                <strong class="card-footer-item">OSX</strong>
+            </footer>
+            <footer class="card-footer">
+                <a href="https://download.docker.com/mac/stable/Docker.dmg" class="card-footer-item">Download</a>
+            </footer>
+            <footer class="card-footer">
+                <strong class="card-footer-item">Linux</strong>
+            </footer>
+            <footer class="card-footer">
+                <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
+            </footer>
         </div>
-        <footer class="card-footer"><br />
-          <strong class="card-footer-item">Windows</strong>
-        </footer>
-        <footer class="card-footer"><br />
-          <a href="https://download.docker.com/win/stable/InstallDocker.msi" class="card-footer-item">Download</a>
-        </footer>
-        <footer class="card-footer"><br />
-          <strong class="card-footer-item">OSX</strong>
-        </footer>
-        <footer class="card-footer">
-          <a href="https://download.docker.com/mac/stable/Docker.dmg" class="card-footer-item">Download</a>
-        </footer>
-        <footer class="card-footer">
-          <strong class="card-footer-item">Linux</strong>
-        </footer>
-        <footer class="card-footer"><br />
-          <span class="card-footer-item">Please contact your distribution maintainer for updates.</span>
-        </footer>
-      </div>
     </div>
-  </div>
 </section></p>
 
 	</main>
