@@ -212,7 +212,8 @@
                 </header>
                 <section class="modal-card-body">
                 <figure class="highlight card-footer-item">
-                    <span class="tag is-info">Easily install gcc on Windows with <a href="http://scoop.sh/">Scoop</a>!</span>
+                    <span class="tag is-info">
+                    <p>Easily install gcc on Windows with <a href="http://scoop.sh/"><strong>  Scoop</strong></a>!</p></span>
                     <pre><code class="language-bash" data-lang="bash">scoop install gcc</code></pre></figure>
                     <div class="content">
                         <h1 class="title">Compiling</h1>
@@ -231,16 +232,14 @@
                         </ul>
                         Then, if you are on a *nix system or Windows, the following steps should compile Nim from source using gcc, git and the koch build tool (in the place of sh build.sh you should substitute build.bat on x86 Windows or build64.bat on x86_64 Windows):
                         <figure class="highlight card-footer-item">
-                            <pre><code class="language-bash" data-lang="bash">
-  $ git clone <a href="https://github.com/nim-lang/Nim.git">https://github.com/nim-lang/Nim.git</a>
-  $ cd Nim
-  $ git clone &ndash;depth 1 <a href="https://github.com/nim-lang/csources.git">https://github.com/nim-lang/csources.git</a>
-  $ cd csources
-  $ sh build.sh
-  $ cd ../
-  $ bin/nim c koch
-  $ ./koch boot -d:release
-          </code></pre></figure>
+                            <pre><code class="language-bash" data-lang="bash">$ git clone <a href="https://github.com/nim-lang/Nim.git">https://github.com/nim-lang/Nim.git</a>
+$ cd Nim
+$ git clone &ndash;depth 1 <a href="https://github.com/nim-lang/csources.git">https://github.com/nim-lang/csources.git</a>
+$ cd csources
+$ sh build.sh
+$ cd ../
+$ bin/nim c koch
+$ ./koch boot -d:release</code></pre></figure>
                         Finally, once you have finished the build steps (on Windows, Mac or Linux) you should add the bin directory to your <strong>PATH</strong>.
                         <h1 class="title">Nimble</h1>
                         Nimble is Nim&rsquo;s package manager and it can be acquired from the <a href="https://github.com/nim-lang/nimble"><strong>nim-lang/nimble</strong></a> repository. Assuming that you added Nim&rsquo;s bin directory to your PATH, you may install
@@ -306,32 +305,35 @@
                     <div class="content">
                         <h1 class="title">Compiling with MinGW</h1>
                         Begin by installing <strong>gcc</strong>, <strong>coreutils</strong>, and <strong>libiconv</strong> on your system. We recommend <a href="http://scoop.sh/"><strong>Scoop</strong></a> for an easily installation process. Installing
-                        scoop, along with the dependencies listed above is easy:
-                        <br>
-                        <span class="tag is-info">
+                        scoop, along with the dependencies listed above is easy             <span class="tag is-info">
               In PowerShell
-            </span>
+            </span> :
+                        <br>
                     </div>
                     <figure class="highlight card-footer-item">
-                        <pre><code class="language-bash" data-lang="bash">
-iex (new-object net.webclient).downloadstring(&lsquo;<a href="https://get.scoop.sh'">https://get.scoop.sh'</a>)
-scoop install gcc; scoop install make; scoop install coreutils; scoop install iconv
-          </code></pre></figure>
+                        <pre><code class="language-bash" data-lang="bash">iex (new-object net.webclient).downloadstring(&lsquo;<a href="https://get.scoop.sh'">https://get.scoop.sh'</a>)
+scoop install gcc; scoop install make; scoop install coreutils; scoop install iconv</code></pre></figure>
                     <div class="notification is-warning">
                         If you get an error you might need to change the execution policy (i.e. enable Powershell) with Set-ExecutionPolicy RemoteSigned -scope CurrentUser
                     </div>
                     Next you should add an <strong>environment variable</strong> to your system named <strong>MINGW</strong>, which points to your gcc installation. Assuming you used Scoop to install gcc, issue the following command to determine where
                     gcc was installed on your system:
                     <figure class="highlight card-footer-item">
-                        <pre><code class="language-bash" data-lang="bash">
-scoop which gcc
-          </code></pre></figure>
+                        <pre><code class="language-bash" data-lang="bash">scoop which gcc</code></pre></figure>
                     You should see a response pointing to the gcc executable. For example:
                     <figure class="highlight card-footer-item">
-                        <pre><code class="language-bash" data-lang="bash">
-C:\Users\FragUser\scoop\apps\gcc\current\bin\gcc.exe
-          </code></pre></figure>
-                    Given the above example, you would set the environment variable value to: <strong>C:\Users\FragUser\scoop\apps\gcc\current</strong>
+                        <pre><code class="language-bash" data-lang="bash">C:\Users\FragUser\scoop\apps\gcc\current\bin\gcc.exe</code></pre></figure>
+                    <p>Given the above example, you would set the environment variable value to: <strong>C:\Users\FragUser\scoop\apps\gcc\current</strong></p>
+                    <br>
+                    <p>
+                    Initialize the <strong>bgfx</strong>, <strong>bimg</strong>, and <strong>bx</strong> submodules inside the vendor folder of the cloned FRAG repository:</p>
+                              <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">git submodule update &ndash;init vendor\bgfx vendor\bimg vendor\bx</code></pre></figure>
+                    Run the following commands from within the vendor\bgfx directory of the cloned repository:
+                    <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">..\bx\tools\bin\windows\genie.exe &ndash;with-tools &ndash;with-shared-lib &ndash;gcc=mingw-gcc gmake
+cd .build\projects\gmake-mingw-gcc
+make config=release64</code></pre></figure>
                 </section>
                 <footer class="modal-card-foot">
                 </footer>
