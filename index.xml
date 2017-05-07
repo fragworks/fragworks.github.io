@@ -98,8 +98,8 @@ proc resize*(e: EventArgs) = let event = SDLEventMessage(e).event let sdlEventDa
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fragworks.io/documentation/examples/desktop/</guid>
-      <description>Overview  Desktop     Running Desktop Examples  Instructions for running the desktop examples depend on your operating system.
-Windows  Ensure DLLs are in search path On the Windows operating system, the DLLs for all of the various FRAG dependencies, must be included in the search path Windows searches for DLLs in.
+      <description>Overview  Desktop     Running Desktop Examples  Setup instructions for running the desktop examples depend on your operating system.
+Windows  Ensure DLLs are in the search path On the Windows operating system, the DLLs for all of the various FRAG dependencies, must be included in the search path Windows searches for DLLs in.
 The simplest option is to place them inside of the frag\examples directory, and then run the examples from there.</description>
     </item>
     

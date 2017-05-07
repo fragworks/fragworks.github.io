@@ -171,18 +171,40 @@
 </nav>
 <section class="section">
   <div class="container">
-    <div class="content doc-content" id="implementation">
+    <div class="content doc-content">
       <h3 class="title is-2">Running</h3>
       <h4 class="subtitle is-4">Desktop Examples</h4>
       <hr>
-      <p>Instructions for running the desktop examples depend on your operating system.</p>
+      <p>Setup instructions for running the desktop examples depend on your operating system.</p>
       <h4 class="title is-2">
       Windows
       </h4>
-      <h5 class="subtitle is-4">Ensure DLLs are in search path</h5>
+      <h5 class="subtitle is-4">Ensure DLLs are in the search path</h5>
       <p>On the Windows operating system, the DLLs for all of the various <a href="/documentation/dependencies"><strong>FRAG dependencies</strong></a>, must be included in the search path Windows searches for DLLs in.</p>
-      <p>The simplest option is to place them inside of the <strong>frag\examples</strong> directory, and then <strong>run the examples from there</strong>. Other options include placing them inside of a directory already included in the search path, or placing them inside of a directory and adding this directory to the <strong>PATH</strong> environment variable.</p>
+      <p>The simplest option is to place them inside of the <strong>frag\examples</strong> directory, and then <strong>run the examples from there</strong>. Other options include placing them inside of a directory already included in the search path, or placing them inside of a directory and adding this directory to the <strong>PATH</strong> environment variable. Users should follow this pattern for linking all <strong>FRAG</strong> dependencies, including optional ones like <strong>Chipmunk2D</strong> and <strong>Spine</strong> when desired.</p>
       <a href="https://msdn.microsoft.com/en-us/library/7d83bc18.aspx">More Information</a>
+      <hr>
+      <h4 class="title is-2">
+      OSX | Linux
+      </h4>
+      <h5 class="subtitle is-4">Ensure shared libraries are in the linker search path</h5>
+      <p>On the Linux and OSX operating systems, the shared libraries for all of the various <a href="/documentation/dependencies"><strong>FRAG dependencies</strong></a>, must be included in the search path of the linker being used to link the example application.</p>
+      <p>The <strong>nim.cfg</strong> file in the <strong>frag/examples</strong> directory contains relative paths for both operating systems, which point to the <strong>BGFX</strong> shared library. Another option is to place dependencies in paths already known to the linker, such as <strong>/usr/local/lib</strong>. Users should follow this pattern for linking all <strong>FRAG</strong> dependencies, including optional ones like <strong>Chipmunk2D</strong> and <strong>Spine</strong> when desired.</p>
+      <hr>
+      <p>Once the steps listed above have been completed, execute the following command from the <strong>frag/examples</strong> directory for a list of available examples:</p>
+      <figure class="highlight"><pre><code class="language-bash" data-lang="bash">nim c -r examples.nim</code></pre></figure>
+      <p>You should see output similar to:</p>
+      <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Available tasks:
+D00 - Desktop : Run example hello-world
+D01 - Desktop : Run example sprite-batch
+D02 - Desktop : Run example audio
+D03 - Desktop : Run example input
+D04 - Desktop : Run example sprite-animation
+D05 - Desktop : Run example gui
+D06 - Desktop : Run example physics</code></pre></figure>
+      <p>To run an example, run the same command, but provide the example&rsquo;s id as an option:</p>
+      <figure class="highlight"><pre><code class="language-bash" data-lang="bash">nim c -r examples.nim D00</code></pre></figure>
+    </div>
   </div>
 </section></p>
 
