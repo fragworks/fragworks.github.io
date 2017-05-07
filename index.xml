@@ -176,7 +176,7 @@ devel version
       <guid>http://fragworks.io/documentation/dependencies/</guid>
       <description>Start  Dependencies  Customize        Nim
 devel version
-    Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.  High-performance garbage-collected language Compiles to C, C++ or JavaScript Produces dependency-free binaries Runs on Windows, macOS, Linux, and more   Windows, OSX, Linux  Nim Compilation Instructions    Nim Compilation Instructions   Easily install gcc on Windows with  Scoop!</description>
+    Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.  High-performance garbage-collected language Compiles to C, C++ or JavaScript Produces dependency-free binaries Runs on Windows, macOS, Linux, and more   Windows, OSX, Linux  Nim Compilation Instructions    Nim   Easily install gcc on Windows with  Scoop!</description>
     </item>
     
     <item>

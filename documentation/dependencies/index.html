@@ -207,7 +207,7 @@
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
-                    <a href="https://github.com/nim-lang/Nim#compiling" class="modal-card-title">Nim Compilation Instructions</a>
+                    <a href="https://github.com/nim-lang/Nim#compiling" class="modal-card-title">Nim</a>
                     <button class="delete"></button>
                 </header>
                 <section class="modal-card-body">
@@ -234,7 +234,7 @@
                         <figure class="highlight card-footer-item">
                             <pre><code class="language-bash" data-lang="bash">$ git clone <a href="https://github.com/nim-lang/Nim.git">https://github.com/nim-lang/Nim.git</a>
 $ cd Nim
-$ git clone &ndash;depth 1 <a href="https://github.com/nim-lang/csources.git">https://github.com/nim-lang/csources.git</a>
+$ git clone &#45;&#45;depth 1 <a href="https://github.com/nim-lang/csources.git">https://github.com/nim-lang/csources.git</a>
 $ cd csources
 $ sh build.sh
 $ cd ../
@@ -281,29 +281,31 @@ $ ./koch boot -d:release</code></pre></figure>
                 <strong class="card-footer-item">Windows</strong>
             </footer>
             <footer class="card-footer">
-                <a class="card-footer-item modal-button" data-target="#bgfx-win-compile">BGFX Compilation Instructions</a>
+                <a class="card-footer-item modal-button" data-target="#bgfx-win-compile">BGFX Compilation Instructions - Windows</a>
             </footer>
             <footer class="card-footer">
                 <strong class="card-footer-item">OSX</strong>
             </footer>
             <footer class="card-footer">
+                <a class="card-footer-item modal-button" data-target="#bgfx-osx-compile">BGFX Compilation Instructions - OSX</a>
             </footer>
             <footer class="card-footer">
                 <strong class="card-footer-item">Linux</strong>
             </footer>
             <footer class="card-footer">
+                <a class="card-footer-item modal-button" data-target="#bgfx-linux-compile">BGFX Compilation Instructions - Linux</a>
             </footer>
         </div>
         <div class="modal" id="bgfx-win-compile">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
-                    <p class="modal-card-title">BGFX Compilation Instructions - Windows</p>
+                    <p class="modal-card-title">BGFX - Windows</p>
                     <button class="delete"></button>
                 </header>
                 <section class="modal-card-body">
                     <div class="content">
-                        <h1 class="title">Compiling with MinGW</h1>
+                        <h1 class="title">Compiling with GCC</h1>
                         Begin by installing <strong>gcc</strong>, <strong>coreutils</strong>, and <strong>libiconv</strong> on your system. We recommend <a href="http://scoop.sh/"><strong>Scoop</strong></a> for an easily installation process. Installing
                         scoop, along with the dependencies listed above is easy             <span class="tag is-info">
               In PowerShell
@@ -329,11 +331,59 @@ scoop install gcc; scoop install make; scoop install coreutils; scoop install ic
                     <p>
                     Initialize the <strong>bgfx</strong>, <strong>bimg</strong>, and <strong>bx</strong> submodules inside the vendor folder of the cloned FRAG repository:</p>
                               <figure class="highlight card-footer-item">
-                        <pre><code class="language-bash" data-lang="bash">git submodule update &ndash;init vendor\bgfx vendor\bimg vendor\bx</code></pre></figure>
+                        <pre><code class="language-bash" data-lang="bash">git submodule update &#45;&#45;init vendor\bgfx vendor\bimg vendor\bx</code></pre></figure>
                     Run the following commands from within the vendor\bgfx directory of the cloned repository:
                     <figure class="highlight card-footer-item">
-                        <pre><code class="language-bash" data-lang="bash">..\bx\tools\bin\windows\genie.exe &ndash;with-tools &ndash;with-shared-lib &ndash;gcc=mingw-gcc gmake
+                        <pre><code class="language-bash" data-lang="bash">..\bx\tools\bin\windows\genie.exe &#45;&#45;with-tools &#45;&#45;with-shared-lib &#45;&#45;gcc=mingw-gcc gmake
 cd .build\projects\gmake-mingw-gcc
+make config=release64</code></pre></figure>
+                </section>
+                <footer class="modal-card-foot">
+                </footer>
+            </div>
+        </div>
+        <div class="modal" id="bgfx-osx-compile">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">BGFX - OSX</p>
+                    <button class="delete"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="content">
+                        <h1 class="title">Compiling with Clang</h1>
+                    <p>
+                    Initialize the <strong>bgfx</strong>, <strong>bimg</strong>, and <strong>bx</strong> submodules inside the vendor folder of the cloned FRAG repository:</p>
+                              <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">git submodule update &#45;&#45;init vendor/bgfx vendor/bimg vendor/bx</code></pre></figure>
+                    Run the following commands from within the vendor/bgfx directory of the cloned repository:
+                    <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">../bx/tools/bin/darwin/genie &#45;&#45;with-tools &#45;&#45;with-shared-lib &#45;&#45;gcc=osx gmake
+cd .build/projects/gmake-osx/
+make config=release64</code></pre></figure>
+                </section>
+                <footer class="modal-card-foot">
+                </footer>
+            </div>
+        </div>
+        <div class="modal" id="bgfx-linux-compile">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">BGFX - Linux</p>
+                    <button class="delete"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="content">
+                        <h1 class="title">Compiling with GCC</h1>
+                    <p>
+                    Initialize the <strong>bgfx</strong>, <strong>bimg</strong>, and <strong>bx</strong> submodules inside the vendor folder of the cloned FRAG repository:</p>
+                              <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">git submodule update &#45;&#45;init vendor/bgfx vendor/bimg vendor/bx</code></pre></figure>
+                    Run the following commands from within the vendor/bgfx directory of the cloned repository:
+                    <figure class="highlight card-footer-item">
+                        <pre><code class="language-bash" data-lang="bash">../bx/tools/bin/linux/genie &#45;&#45;with-tools &#45;&#45;with-shared-lib &#45;&#45;gcc=linux-gcc gmake
+cd .build/projects/gmake-linux/
 make config=release64</code></pre></figure>
                 </section>
                 <footer class="modal-card-foot">
