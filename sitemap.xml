@@ -73,10 +73,6 @@
   </url>
   
   <url>
-    <loc>http://fragworks.io/documentation/dependencies.1/</loc>
-  </url>
-  
-  <url>
     <loc>http://fragworks.io/documentation/dependencies/</loc>
   </url>
   
@@ -99,6 +95,10 @@
     <loc>http://fragworks.io/roadmap/</loc>
     <lastmod>2017-04-13T11:11:53-04:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://fragworks.io/documentation/examples/</loc>
   </url>
   
   <url>
