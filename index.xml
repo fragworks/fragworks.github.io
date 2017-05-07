@@ -17,9 +17,18 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fragworks.io/documentation/install/</guid>
-      <description>Start  Dependencies  Customize  Running Examples     2 ways to get started  1
+      <description>Start  Dependencies  Customize     2 ways to get started  1
  Use Nimble (if dependencies are already installed): nimble install frag   2
  Clone the repository and install from source (if dependencies need to be installed): git clone git@github.com:fragworks/frag.git &amp;amp;&amp;amp; cd frag nimble install -y</description>
+    </item>
+    
+    <item>
+      <title>Examples</title>
+      <link>http://fragworks.io/documentation/examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fragworks.io/documentation/examples/</guid>
+      <description>Overview  Desktop</description>
     </item>
     
     <item>
@@ -81,6 +90,26 @@ Pull requests are also welcome.</description>
       <description>Concept  Implementation  Initialize  Update  Render  Shutdown  Example     Example  Minimal FRAG application implementing game loop  #Nim Standard Library Imports import events #Dependency Imports import bgfxdotnim, sdl2 as sdl #Frag Imports import frag, frag/config, frag/graphics/window, frag/logger, frag/modules/graphics
 type App = ref object
 proc resize*(e: EventArgs) = let event = SDLEventMessage(e).event let sdlEventData = event.sdlEventData let graphics = event.graphics graphics.setViewRect(0, 0, 0, uint16 sdlEventData.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://fragworks.io/documentation/examples/desktop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fragworks.io/documentation/examples/desktop/</guid>
+      <description>Overview  Desktop     Running Desktop Examples  Instructions for running the desktop examples depend on your operating system.
+Windows  Ensure DLLs are in search path On the Windows operating system, the DLLs for all of the various FRAG dependencies, must be included in the search path Windows searches for DLLs in.
+The simplest option is to place them inside of the frag\examples directory, and then run the examples from there.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://fragworks.io/documentation/examples/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fragworks.io/documentation/examples/overview/</guid>
+      <description>Overview  Desktop</description>
     </item>
     
     <item>
@@ -163,7 +192,7 @@ Engine Code proc startFrag*T = var ctx = Frag() ctx.init(config, app) app.</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fragworks.io/documentation/dependencies/</guid>
-      <description>Start  Dependencies  Customize  Running Examples        Nim
+      <description>Start  Dependencies  Customize        Nim
 devel version
     Nim is a systems and applications programming language. Statically typed and compiled, it provides unparalleled performance in an elegant package.  High-performance garbage-collected language Compiles to C, C++ or JavaScript Produces dependency-free binaries Runs on Windows, macOS, Linux, and more   Windows, OSX, Linux  Nim Compilation Instructions    Nim   Easily install gcc on Windows with  Scoop!</description>
     </item>
@@ -174,18 +203,9 @@ devel version
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fragworks.io/documentation/index/</guid>
-      <description>Start  Dependencies  Customize  Running Examples     2 ways to get started  1
+      <description>Start  Dependencies  Customize     2 ways to get started  1
  Use Nimble (if dependencies are already installed): nimble install frag   2
  Clone the repository and install from source (if dependencies need to be installed): git clone git@github.com:fragworks/frag.git &amp;amp;&amp;amp; cd frag nimble install -y</description>
-    </item>
-    
-    <item>
-      <title>Running Examples</title>
-      <link>http://fragworks.io/documentation/examples/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://fragworks.io/documentation/examples/</guid>
-      <description>Start  Dependencies  Customize  Running Examples</description>
     </item>
     
   </channel>
