@@ -205,7 +205,7 @@ devel version
       <guid>http://fragworks.io/documentation/index/</guid>
       <description>Start  Dependencies  Customize     2 ways to get started  1
  Use Nimble (if dependencies are already installed): nimble install frag   2
- Clone the repository and install from source (if dependencies need to be installed): git clone git@github.com:fragworks/frag.git &amp;amp;&amp;amp; cd frag nimble install -y</description>
+ Clone the repository and install from source (if dependencies need to be installed): git clone https://github.com/fragworks/frag.git &amp;amp;&amp;amp; cd frag nimble install -y</description>
     </item>
     
   </channel>
