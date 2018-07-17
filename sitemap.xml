@@ -2,115 +2,115 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://fragworks.github.io/documentation/install/</loc>
+    <loc>https://fragworks.github.io/documentation/install/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/examples/</loc>
+    <loc>https://fragworks.github.io/documentation/examples/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/config/</loc>
+    <loc>https://fragworks.github.io/documentation/config/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/gameloop/</loc>
+    <loc>https://fragworks.github.io/documentation/gameloop/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/asset/</loc>
+    <loc>https://fragworks.github.io/documentation/asset/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/event/</loc>
+    <loc>https://fragworks.github.io/documentation/event/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/roadmap/index/</loc>
+    <loc>https://fragworks.github.io/roadmap/index/</loc>
     <lastmod>2017-04-13T11:11:53-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/example/</loc>
+    <loc>https://fragworks.github.io/documentation/example/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/examples/desktop/</loc>
+    <loc>https://fragworks.github.io/documentation/examples/desktop/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/examples/overview/</loc>
+    <loc>https://fragworks.github.io/documentation/examples/overview/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/implementation/</loc>
+    <loc>https://fragworks.github.io/documentation/implementation/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/initialize/</loc>
+    <loc>https://fragworks.github.io/documentation/initialize/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/listeners/</loc>
+    <loc>https://fragworks.github.io/documentation/listeners/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/loading/</loc>
+    <loc>https://fragworks.github.io/documentation/loading/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/render/</loc>
+    <loc>https://fragworks.github.io/documentation/render/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/shutdown/</loc>
+    <loc>https://fragworks.github.io/documentation/shutdown/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/update/</loc>
+    <loc>https://fragworks.github.io/documentation/update/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/categories/</loc>
+    <loc>https://fragworks.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/community/</loc>
+    <loc>https://fragworks.github.io/community/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/community/index/</loc>
+    <loc>https://fragworks.github.io/community/index/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/dependencies/</loc>
+    <loc>https://fragworks.github.io/documentation/dependencies/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/index/</loc>
+    <loc>https://fragworks.github.io/documentation/index/</loc>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/documentation/</loc>
+    <loc>https://fragworks.github.io/documentation/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/</loc>
-    <lastmod>2017-04-13T11:11:53-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://fragworks.github.io/roadmap/</loc>
+    <loc>https://fragworks.github.io/</loc>
     <lastmod>2017-04-13T11:11:53-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://fragworks.github.io/tags/</loc>
+    <loc>https://fragworks.github.io/roadmap/</loc>
+    <lastmod>2017-04-13T11:11:53-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fragworks.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
